@@ -1,0 +1,20 @@
+{
+  "get-started": {
+    "title": "Get Started",
+    "order": 1,
+    "group": "one",
+    "icon": "LightingIcon"
+  },
+  "community": {
+    "title": "Community",
+    "order": 2,
+    "group": "one",
+    "icon": "GitIcon"
+  },
+  "components": {
+    "title": "Components",
+    "order": 3,
+    "group": "two",
+    "icon": "ComponentIcon"
+  }
+}

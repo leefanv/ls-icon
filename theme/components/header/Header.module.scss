@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 16px;
+}
+
+.link {
+  text-decoration: none;
+
+  > a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 12px;
+}
+
+.divide {
+  height: 16px;
+  border-left: 1px solid var(--wd-border-color-01);
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: unset;
+
+  &:hover {
+    color: unset;
+  }
+}
+
+.github {
+  font-size: 28px;
+  color: var(--wd-font-color-inverse);
+}
+
+.icon {
+  color: var(--wd-font-color-helper);
+  margin: 0 0 0 4px;
+  font-size: var(--wd-font-size-base);
+}

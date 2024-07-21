@@ -1,0 +1,20 @@
+import { NextIntlClientProvider } from "next-intl";
+import { useRouter } from "next/router";
+
+import locales from "../locales";
+
+import "../theme/style.css";
+
+export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  return (
+    <NextIntlClientProvider
+      locale={router.locale}
+      messages={locales[router.locale]}
+      timeZone="Europe/Vienna"
+    >
+      <Component {...pageProps} />
+    </NextIntlClientProvider>
+  );
+}

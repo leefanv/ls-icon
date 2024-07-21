@@ -1,0 +1,10 @@
+.logo {
+  width: 180px;
+  height: 32px;
+  background-size: 180px 32px;
+  background-image: url("../../assets/images/logo.svg");
+}
+
+[data-theme="dark"] .logo {
+  background-image: url("../../assets/images/logo-white.svg");
+}

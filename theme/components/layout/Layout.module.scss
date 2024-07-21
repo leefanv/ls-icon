@@ -1,0 +1,81 @@
+.header,
+.main,
+.left,
+.right {
+  background: var(--wd-background-color-default);
+  color: var(--wd-font-color-inverse);
+  font-size: var(--wd-font-size-sm);
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  scrollbar-color: var(--wd-border-color-01) transparent;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 64px;
+  border-bottom: 1px solid var(--wd-border-color-01);
+  width: 100%;
+  z-index: 2;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+
+  .content {
+    padding: 88px 244px 0 272px;
+  }
+}
+
+.full {
+  margin: -64px 0 0 0;
+  padding: 64px 0 0 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.aside {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  max-width: 1200px;
+  z-index: 1;
+  margin: -64px auto 0;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 64px);
+  overflow: auto;
+  margin: 64px 0 0 0;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 232px;
+  height: calc(100vh - 64px);
+  overflow: auto;
+  margin: 64px 0 0 0;
+}

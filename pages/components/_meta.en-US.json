@@ -1,0 +1,26 @@
+{
+  "input": {
+    "title": "Input",
+    "description": "The input box component is used to receive text information entered by the user, and can be configured with different types, sizes, prefixes, suffixes, and other properties.",
+    "github": "http://www.baidu.com",
+    "group": "Form",
+    "order": 1,
+    "show": true
+  },
+  "select": {
+    "title": "Select",
+    "description": "The input box component is used to receive text information entered by the user, and can be configured with different types, sizes, prefixes, suffixes, and other properties.",
+    "github": "http://www.baidu.com",
+    "group": "Form",
+    "order": 1,
+    "show": true
+  },
+  "table": {
+    "title": "Table",
+    "description": "The table component is used to display data in a tabular format.",
+    "github": "http://www.baidu.com",
+    "group": "Data",
+    "order": 2,
+    "show": true
+  }
+}

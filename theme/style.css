@@ -1,0 +1,38 @@
+@import './token.css';
+@import './docsearchToken.css';
+@import './docsearch.css';
+
+body {
+  font-family: Inter;
+  font-size: 14px;
+  text-align: left;
+
+  padding: 0;
+  margin: 0;
+
+  scrollbar-color: var(--wd-border-color-01) transparent;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}

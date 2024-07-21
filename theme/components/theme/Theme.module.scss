@@ -1,0 +1,19 @@
+.theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--wd-border-color-01);
+}
+
+.icon {
+  font-size: 16px;
+  color: var(--wd-font-color-inverse);
+}
