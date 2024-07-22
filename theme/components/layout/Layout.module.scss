@@ -10,10 +10,7 @@
 
 .left,
 .right {
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  scrollbar-color: var(--wd-border-color-01) transparent;
+  scrollbar-color: var(--wd-border-color-01) var(--wd-background-color-default);
 }
 
 .header {

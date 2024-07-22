@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "wis site",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
     "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
     "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true next start"

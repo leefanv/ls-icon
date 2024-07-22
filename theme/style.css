@@ -2,6 +2,10 @@
 @import './docsearchToken.css';
 @import './docsearch.css';
 
+html {
+  scrollbar-color: var(--wd-border-color-01) var(--wd-background-color-default);
+}
+
 body {
   font-family: Inter;
   font-size: 14px;
@@ -9,8 +13,6 @@ body {
 
   padding: 0;
   margin: 0;
-
-  scrollbar-color: var(--wd-border-color-01) transparent;
 }
 
 button {
