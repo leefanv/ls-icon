@@ -1,10 +1,8 @@
 .header,
 .main,
+.full,
 .left,
 .right {
-  background: var(--wd-background-color-default);
-  color: var(--wd-font-color-inverse);
-  font-size: var(--wd-font-size-sm);
   box-sizing: border-box;
 }
 
@@ -21,6 +19,7 @@
   border-bottom: 1px solid var(--wd-border-color-01);
   width: 100%;
   z-index: 2;
+  background: var(--wd-background-color-default);
 }
 
 .main {
@@ -29,6 +28,7 @@
 
   .content {
     padding: 88px 244px 0 272px;
+    border: 1px solid transparent;
   }
 }
 

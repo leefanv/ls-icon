@@ -5,17 +5,12 @@ import GithubIcon from "../../../assets/icons/github.svg";
 import styles from "./Meta.module.scss";
 
 interface MetaProps {
-  show: boolean;
   github?: string;
   title: string;
   description?: string;
 }
 
-function Meta({ show, github, title, description }: MetaProps) {
-  if (!show) {
-    return null;
-  }
-
+function Meta({ github, title, description }: MetaProps) {
   return (
     <div className={styles.meta}>
       {title && (

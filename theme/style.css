@@ -3,6 +3,9 @@
 @import './docsearch.css';
 
 html {
+  background: var(--wd-background-color-default);
+  color: var(--wd-font-color-inverse);
+  font-size: var(--wd-font-size-sm);
   scrollbar-color: var(--wd-border-color-01) var(--wd-background-color-default);
 }
 

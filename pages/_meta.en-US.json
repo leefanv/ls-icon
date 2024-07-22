@@ -1,4 +1,7 @@
 {
+  "index": {
+    "fullScreen": true
+  },
   "get-started": {
     "title": "Get Started",
     "order": 1,

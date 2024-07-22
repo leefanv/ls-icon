@@ -3,18 +3,18 @@ import { ReactNode } from "react";
 import styles from "./Layout.module.scss";
 
 interface LayoutProps {
-  isIndex: boolean;
+  isFullScreen: boolean;
   header: ReactNode;
   left?: ReactNode;
   right?: ReactNode;
   children: ReactNode;
 }
 
-function Layout({ isIndex, header, left, right, children }: LayoutProps) {
+function Layout({ isFullScreen, header, left, right, children }: LayoutProps) {
   const hasLeft = !!left;
   const hasRight = !!right;
 
-  if (isIndex) {
+  if (isFullScreen) {
     return (
       <>
         <header className={styles.header}>

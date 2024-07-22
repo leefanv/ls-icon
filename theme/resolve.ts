@@ -22,7 +22,9 @@ function resolveFolderFirstRoute(pages) {
 interface Meta {
   order?: number;
   group?: string | number;
-  show?: boolean;
+  showMeta?: boolean;
+  showSubMenu?: boolean;
+  fullScreen?: boolean;
   [prop: string]: any;
 }
 

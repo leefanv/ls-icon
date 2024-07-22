@@ -1,0 +1,9 @@
+{
+  "design": {
+    "title": "Design",
+    "description": "输入框组件用于接收用户输入的文本信息，可以配置不同的类型、大小、前缀、后缀等属性。",
+    "github": "http://www.baidu.com",
+    "group": "Form",
+    "order": 1
+  }
+}

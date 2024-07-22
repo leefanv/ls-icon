@@ -11,7 +11,7 @@ import Breadcrumbs from "./components/breadcrumbs/Breadcrumbs";
 import Meta from "./components/meta/Meta";
 import Layout from "./components/layout/Layout";
 
-import { resolvePages, groupPages, getPageBreadcrumbs } from "./resolve";
+import { resolvePages, groupPages, getPageBreadcrumbs, getActivePage } from "./resolve";
 
 import styles from "./Theme.module.scss";
 
@@ -42,15 +42,15 @@ export default function Theme({
   const pages = resolvePages(pageMap, router.locale);
   const pageGroups = groupPages(pages.filter((page) => page.name !== "index"));
   const breadcrumbs = getPageBreadcrumbs(pages, pageOpts.route);
+  const activePage = getActivePage(pages, pageOpts.route);
 
-  const showMetaPage = breadcrumbs
-    .slice()
-    .reverse()
-    .find((breadcrumb) => breadcrumb.meta.show);
+  const reverseBreadcrumbs = breadcrumbs.slice().reverse();
+  const showMetaPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showMeta);
+  const showSubMenuPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showSubMenu);
 
   return (
     <Layout
-      isIndex={isIndex}
+      isFullScreen={activePage.meta.fullScreen}
       header={<Header themeConfig={localeThemeConfig} />}
       left={
         !isIndex && <Nav
@@ -65,10 +65,10 @@ export default function Theme({
       {!isIndex && (
         <>
           <Breadcrumbs data={breadcrumbs} />
-          {showMetaPage && <Meta {...showMetaPage.meta}></Meta>}
-          {showMetaPage && !!showMetaPage.children?.length && (
+          {showMetaPage && <Meta {...showMetaPage.meta} />}
+          {showSubMenuPage && !!showSubMenuPage.children?.length && (
             <div className={styles.links}>
-              {showMetaPage.children.map((item) => {
+              {showSubMenuPage.children.map((item) => {
                 return (
                   <Link
                     key={item.name}

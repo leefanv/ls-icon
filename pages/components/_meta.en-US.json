@@ -5,7 +5,8 @@
     "github": "http://www.baidu.com",
     "group": "Form",
     "order": 1,
-    "show": true
+    "showMeta": true,
+    "showSubMenu": true
   },
   "select": {
     "title": "Select",
@@ -13,7 +14,8 @@
     "github": "http://www.baidu.com",
     "group": "Form",
     "order": 1,
-    "show": true
+    "showMeta": true,
+    "showSubMenu": true
   },
   "table": {
     "title": "Table",
@@ -21,6 +23,7 @@
     "github": "http://www.baidu.com",
     "group": "Data",
     "order": 2,
-    "show": true
+    "showMeta": true,
+    "showSubMenu": true
   }
 }
