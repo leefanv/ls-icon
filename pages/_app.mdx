@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
+import Head from 'next/head'
 
 import locales from "../locales";
 
@@ -14,6 +15,10 @@ export default function App({ Component, pageProps }) {
       messages={locales[router.locale]}
       timeZone="Europe/Vienna"
     >
+      <Head>
+        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+      </Head>
       <Component {...pageProps} />
     </NextIntlClientProvider>
   );
