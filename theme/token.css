@@ -1,4 +1,6 @@
 :root {
+  --wd-font-sans: Inter,int-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --wd-font-code: IBM Plex Sans,int-apple-system,Roboto;
   --wd-palette-common-brand: #4F46E5;
   --wd-palette-common-brand-transparent: rgba(79, 70, 229, 0.00);
   --wd-palette-common-black: #101828;
@@ -50,6 +52,8 @@
 }
 
 html[data-theme='dark'] {
+  --wd-font-sans: Inter,int-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --wd-font-code: IBM Plex Sans,int-apple-system,Roboto;
   --wd-palette-common-brand: #6366F1;
   --wd-palette-common-brand-transparent: rgba(99, 102, 241, 0.00);
   --wd-palette-common-black: #0F172A;
