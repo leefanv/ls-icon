@@ -1,15 +1,14 @@
 .DocSearch-Button {
   align-items: center;
-  background: var(--docsearch-searchbox-background);
-  border: 0;
-  border-radius: 40px;
-  color: var(--docsearch-muted-color);
+  background: var(--wd-background-color-default);
+  border: 1px solid var(--wd-border-color-01);
+  border-radius: var(--wd-border-radius-m);
+  color: var(--wd-font-color-helper);
   cursor: pointer;
   display: flex;
   font-weight: 500;
-  height: 36px;
+  height: 32px;
   justify-content: space-between;
-  margin: 0 0 0 16px;
   padding: 0 8px;
   user-select: none;
 }
@@ -17,9 +16,9 @@
 .DocSearch-Button:hover,
 .DocSearch-Button:active,
 .DocSearch-Button:focus {
-  background: var(--docsearch-searchbox-focus-background);
-  box-shadow: var(--docsearch-searchbox-shadow);
-  color: var(--docsearch-text-color);
+  background: var(--wd-background-color-default);
+  border-color: var(--wd-border-color-03);
+  color: var(--wd-font-color-inverse);
   outline: none;
 }
 
@@ -30,6 +29,8 @@
 
 .DocSearch-Search-Icon {
   stroke-width: 1.6;
+  width: 16px;
+  height: 16px;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -43,29 +44,21 @@
 
 .DocSearch-Button-Keys {
   display: flex;
-  min-width: calc(2 * 20px + 2 * 0.4em);
+  gap: 0 4px;
 }
 
 .DocSearch-Button-Key {
   align-items: center;
-  background: var(--docsearch-key-gradient);
+  background: var(--wd-background-color-01);
   border-radius: 3px;
-  box-shadow: var(--docsearch-key-shadow);
-  color: var(--docsearch-muted-color);
+  color: var(--wd-font-color-inverse);
   display: flex;
   height: 18px;
   justify-content: center;
-  margin-right: 0.4em;
   position: relative;
   padding: 0px 0px 2px 0px;
   border: 0px;
-  top: -1px;
   width: 20px;
-}
-
-.DocSearch-Button-Key--pressed {
-  transform: translate3d(0, 1px, 0);
-  box-shadow: var(--docsearch-key-pressed-shadow);
 }
 
 @media (max-width: 768px) {
@@ -78,11 +71,7 @@
 /* Body modifier */
 
 .DocSearch--active {
-  /*
-   * We need to mark it as important because some websites override the
-   * `style` attribute (e.g. Docusaurus).
-   */
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 /* Container & Modal */
@@ -118,9 +107,9 @@
 }
 
 .DocSearch-Modal {
-  background: var(--docsearch-modal-background);
+  background: var(--wd-background-color-default);
+  border: 1px solid var(--wd-border-color-01);
   border-radius: 6px;
-  box-shadow: var(--docsearch-modal-shadow);
   flex-direction: column;
   margin: 60px auto auto;
   max-width: var(--docsearch-modal-width);
@@ -131,14 +120,11 @@
 
 .DocSearch-SearchBar {
   display: flex;
-  padding: var(--docsearch-spacing) var(--docsearch-spacing) 0;
+  border-bottom: 1px solid var(--wd-border-color-01);
 }
 
 .DocSearch-Form {
   align-items: center;
-  background: var(--docsearch-searchbox-focus-background);
-  border-radius: 4px;
-  box-shadow: var(--docsearch-searchbox-shadow);
   display: flex;
   height: var(--docsearch-searchbox-height);
   margin: 0;
@@ -151,10 +137,10 @@
   appearance: none;
   background: transparent;
   border: 0;
-  color: var(--docsearch-text-color);
+  color: var(--wd-font-color-helper);
   flex: 1;
   font: inherit;
-  font-size: 1.2em;
+  font-size: var(--wd-font-size-base);
   height: 100%;
   outline: none;
   padding: 0 0 0 8px;
@@ -240,8 +226,9 @@
 
 .DocSearch-LoadingIndicator svg,
 .DocSearch-MagnifierLabel svg {
-  height: 24px;
-  width: 24px;
+  color: var(--wd-font-color-inverse);
+  height: 16px;
+  width: 16px;
 }
 
 .DocSearch-Cancel {
@@ -259,9 +246,6 @@
   overflow-y: auto; /* firefox */
   overflow-y: overlay;
   padding: 0 var(--docsearch-spacing);
-  scrollbar-color: var(--docsearch-muted-color)
-    var(--docsearch-modal-background);
-  scrollbar-width: thin;
 }
 
 .DocSearch-Dropdown::-webkit-scrollbar {
@@ -342,6 +326,10 @@
   position: relative;
 }
 
+.DocSearch-Hit.DocSearch-Hit--Child {
+  margin: 0 0 0 40px;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   .DocSearch-Hit--deleting {
     transition: none;
@@ -367,17 +355,16 @@
 }
 
 .DocSearch-Hit a {
-  background: var(--docsearch-hit-background);
+  border: 1px solid var(--wd-border-color-01);
   border-radius: 4px;
-  box-shadow: var(--docsearch-hit-shadow);
   display: block;
   padding-left: var(--docsearch-spacing);
   width: 100%;
 }
 
 .DocSearch-Hit-source {
-  background: var(--docsearch-modal-background);
-  color: var(--docsearch-highlight-color);
+  background: var(--wd-background-color-default);
+  color: var(--wd-font-color-inverse);
   font-size: 0.85em;
   font-weight: 600;
   line-height: 32px;
@@ -460,14 +447,14 @@ svg.DocSearch-Hit-Select-Icon {
 @media screen and (prefers-reduced-motion: reduce) {
   .DocSearch-Hit-action-button:hover,
   .DocSearch-Hit-action-button:focus {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--wd-background-color-brand);
     transition: none;
   }
 }
 
 .DocSearch-Hit-action-button:hover,
 .DocSearch-Hit-action-button:focus {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--wd-background-color-brand);
   transition: background-color 0.1s ease-in;
 }
 
@@ -581,13 +568,13 @@ svg.DocSearch-Hit-Select-Icon {
 
 .DocSearch-Footer {
   align-items: center;
-  background: var(--docsearch-footer-background);
+  background: var(--wd-background-color-default);
+  border-top: 1px solid var(--wd-border-color-01);
   border-radius: 0 0 8px 8px;
-  box-shadow: var(--docsearch-footer-shadow);
   display: flex;
   flex-direction: row-reverse;
   flex-shrink: 0;
-  height: var(--docsearch-footer-height);
+  height: 56px;
   justify-content: space-between;
   padding: 0 var(--docsearch-spacing);
   position: relative;
@@ -615,15 +602,14 @@ svg.DocSearch-Hit-Select-Icon {
 
 .DocSearch-Commands-Key {
   align-items: center;
-  background: var(--docsearch-key-gradient);
+  background: var(--wd-background-color-01);
   border-radius: 2px;
-  box-shadow: var(--docsearch-key-shadow);
   display: flex;
   height: 18px;
   justify-content: center;
   margin-right: 0.4em;
   padding: 0px 0px 1px 0px;
-  color: var(--docsearch-muted-color);
+  color: var(--wd-font-color-inverse);
   border: 0px;
   width: 20px;
 }
@@ -702,7 +688,7 @@ assistive tech users */
     margin-left: var(--docsearch-spacing);
     outline: none;
     overflow: hidden;
-    padding: 0;
+    padding: 0 12px 0 0;
     user-select: none;
     white-space: nowrap;
   }
