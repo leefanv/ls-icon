@@ -18,7 +18,7 @@ function Meta({ github, title, description }: MetaProps) {
           {title}
           {github && (
             <Link className={styles.github} href={github}>
-              github<GithubIcon></GithubIcon>
+              Github<GithubIcon></GithubIcon>
             </Link>
           )}
         </h1>

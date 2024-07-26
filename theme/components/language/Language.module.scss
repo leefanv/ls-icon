@@ -8,6 +8,10 @@
   height: 32px;
   border-radius: 50%;
   border: 1px solid var(--wd-border-color-01);
+  
+  &:hover {
+    background: var(--wd-background-color-01);
+  }
 }
 
 .icon {

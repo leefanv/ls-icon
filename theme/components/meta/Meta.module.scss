@@ -12,7 +12,10 @@
   gap: 0 4px;
   height: 24px;
   border: 1px solid var(--wd-border-color-01);
-  border-radius: var(--wd-border-radius-xs);
+  border-radius: var(--wd-border-radius-s);
   font-size: var(--wd-font-size-xs);
   padding: 0 8px;
+}
+.github :hover {
+  background-color: var(--wd-background-color-01);
 }

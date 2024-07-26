@@ -7,6 +7,7 @@
   width: 100%;
 
   .title {
+    text-transform: capitalize;
     flex: 1 1 auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -40,8 +41,13 @@
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
-
+  color: var(--wd-font-color-01);
+  font-weight: 400;
   &.active {
     color: var(--wd-font-color-brand);
   }
+  &:hover {
+    color: var(--wd-font-color-03);
+  }
 }
+

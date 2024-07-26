@@ -19,6 +19,7 @@
   --wd-palette-gray-90: #0F172A;
   
   --wd-border-color-01: var(--wd-palette-gray-20);
+  --wd-background-transparent: hsla(0, 0%, 100%, 0.8);
   --wd-background-color-01: var(--wd-palette-gray-10);
   --wd-border-color-02: var(--wd-palette-gray-30);
   --wd-border-color-03: var(--wd-palette-gray-40);
@@ -72,6 +73,7 @@ html[data-theme='dark'] {
   --wd-palette-gray-90: rgba(255, 255, 255, 0.90);
 
   --wd-border-color-01: rgba(255, 255, 255, 0.10);
+  --wd-background-transparent: hsla(222, 47%, 11%, 0.8);
   --wd-background-color-01: rgba(255, 255, 255, 0.05);
   --wd-border-color-02: rgba(255, 255, 255, 0.20);
   --wd-border-color-03: rgba(255, 255, 255, 0.20);

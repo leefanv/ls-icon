@@ -1,5 +1,5 @@
 .nav {
-  padding: 12px;
+  padding: 32px 16px;
 }
 
 .block {
@@ -17,11 +17,25 @@
   align-items: center;
   text-decoration: none;
   height: 40px;
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
   font-weight: 500;
 
   &.active {
     color: var(--wd-font-color-brand);
+    .icon {
+      background: var(--wd-background-color-brand);
+      color: var(--wd-font-color-white);
+    }
+  }
+  &.active:hover {
+    color: var(--wd-font-color-brand);
+    .icon {
+      background: var(--wd-background-color-brand);
+      color: var(--wd-font-color-white);
+    }
+  }
+  &:hover {
+    color: var(--wd-font-color-03);
     .icon {
       background: var(--wd-background-color-brand);
       color: var(--wd-font-color-white);
@@ -35,10 +49,15 @@
   align-items: center;
   text-decoration: none;
   height: 32px;
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
+  font-weight: 400;
 
   &.active {
     color: var(--wd-font-color-brand);
+  }
+
+  &:hover {
+    color: var(--wd-font-color-03);
   }
 }
 
@@ -53,6 +72,7 @@
   font-size: var(--wd-font-size-base);
   background: var(--wd-background-color-01);
   margin: 0 12px 0 0;
+  
 }
 
 .second {

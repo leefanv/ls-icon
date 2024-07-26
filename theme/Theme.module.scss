@@ -11,10 +11,11 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
-  font-weight: 500;
+  font-weight: 400;
 
   &.active {
     color: var(--wd-font-color-brand);
     border-bottom: 2px solid var(--wd-border-color-brand);
+    font-weight: 600;
   }
 }
