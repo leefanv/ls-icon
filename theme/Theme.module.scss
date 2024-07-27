@@ -12,6 +12,11 @@
   align-items: center;
   height: 100%;
   font-weight: 400;
+  color: var(--wd-font-color-inverse);
+
+  &:hover {
+    color: var(--wd-font-color-brand);
+  }
 
   &.active {
     color: var(--wd-font-color-brand);

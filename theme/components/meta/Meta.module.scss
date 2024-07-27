@@ -15,7 +15,8 @@
   border-radius: var(--wd-border-radius-s);
   font-size: var(--wd-font-size-xs);
   padding: 0 8px;
+  color: var(--wd-font-color-inverse);
 }
-.github :hover {
+.github:hover {
   background-color: var(--wd-background-color-01);
 }

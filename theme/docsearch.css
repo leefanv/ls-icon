@@ -15,12 +15,16 @@
 }
 
 .DocSearch-Button:hover,
-.DocSearch-Button:active,
-.DocSearch-Button:focus {
+.DocSearch-Button:active {
   background: var(--wd-background-color-default);
   border-color: var(--wd-border-color-02);
   color: var(--wd-font-color-helper);
   outline: none;
+}
+
+.DocSearch-Button:focus {
+  outline: 1px solid var(--wd-border-color-brand);
+  outline-offset: 1px;
 }
 
 .DocSearch-Button-Container {

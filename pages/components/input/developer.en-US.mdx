@@ -1,29 +1,9 @@
 
-import { Steps } from 'nextra/components'
-import { FileTree } from 'nextra/components'
+```js {1,4-5}
+import { useState } from 'react'
  
-<Steps>
-### Step 1
- 
-Contents for step 1.
- 
-### Step 2
- 
-Contents for step 2.
-</Steps>
-
-
-
- 
-<FileTree>
-  <FileTree.Folder name="pages" defaultOpen>
-    <FileTree.File name="_meta.json" />
-    <FileTree.File name="contact.md" />
-    <FileTree.File name="index.mdx" />
-    <FileTree.Folder name="about">
-      <FileTree.File name="_meta.json" />
-      <FileTree.File name="legal.md" />
-      <FileTree.File name="index.mdx" />
-    </FileTree.Folder>
-  </FileTree.Folder>
-</FileTree>
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
