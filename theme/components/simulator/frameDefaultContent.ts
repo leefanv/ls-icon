@@ -1,6 +1,6 @@
 export default function (agent = "pc") {
   let theme = "light";
-  if (process.browser) {
+  if (typeof window !== "undefined") {
     theme = document.documentElement.getAttribute("data-theme") || theme;
   }
 

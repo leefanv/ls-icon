@@ -9,12 +9,10 @@ type SearchProps = {
 
 function Search({ themeConfig }: SearchProps) {
   useEffect(() => {
-    if (process.browser) {
-      docsearch({
-        container: "#search",
-        ...themeConfig.algolia,
-      });
-    }
+    docsearch({
+      container: "#search",
+      ...themeConfig.algolia,
+    });
   }, []);
 
   return <div id="search"></div>;

@@ -29,21 +29,15 @@
   },
   "components": {
     "title": "Components",
-    "order": 300,
-    "group": "three",
+    "order": 202,
+    "group": "two",
     "icon": "ComponentIcon"
-  },
-  "cli": {
-    "title": "CLI",
-    "order": 301,
-    "group": "three",
-    "icon": "CliIcon"
   },
   "markdown": {
     "title": "Markdown",
     "description": "This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete.",
     "group": "demo",
-    "order": 400,
+    "order": 300,
     "icon": "LightingIcon",
     "showMeta": true
   }

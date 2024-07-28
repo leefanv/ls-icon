@@ -7,14 +7,18 @@ import DarkIcon from "../../../assets/icons/dark.svg";
 import styles from "./Theme.module.scss"
 
 function Theme() {
-  const [mode, setMode] = useState(getSystemTheme());
+  const [mode, setMode] = useState('light');
+
+  useEffect(() => {
+    setMode(getSystemTheme())
+  }, [])
 
   useEffect(() => {
     setFramesTheme(mode);
   }, [mode])
 
   function getSystemTheme() {
-    if (!process.browser) {
+    if (typeof window === 'undefined') {
       return 'light'
     }
 
