@@ -1,32 +1,50 @@
 {
   "index": {
-    "title": "首页",
+    "title": "Home",
     "fullScreen": true
   },
   "get-started": {
     "title": "Get Started",
     "order": 1,
-    "group": "guide",
+    "group": "one",
     "icon": "LightingIcon"
-  },
-  "markdown": {
-    "title": "Markdown",
-    "description": "本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全",
-    "group": "guide",
-    "order": 2,
-    "icon": "LightingIcon",
-    "showMeta": true
   },
   "community": {
     "title": "Community",
-    "order": 3,
-    "group": "guide",
+    "order": 2,
+    "group": "one",
     "icon": "GitIcon"
+  },
+  "design": {
+    "title": "Design",
+    "order": 1,
+    "group": "two",
+    "icon": "MagicIcon"
+  },
+  "develop": {
+    "title": "Develop",
+    "order": 2,
+    "group": "two",
+    "icon": "CodeIcon"
   },
   "components": {
     "title": "Components",
     "order": 1,
-    "group": "two",
+    "group": "three",
     "icon": "ComponentIcon"
+  },
+  "cli": {
+    "title": "CLI",
+    "order": 2,
+    "group": "three",
+    "icon": "CliIcon"
+  },
+  "markdown": {
+    "title": "Markdown",
+    "description": "本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全",
+    "group": "demo",
+    "order": 1,
+    "icon": "LightingIcon",
+    "showMeta": true
   }
 }

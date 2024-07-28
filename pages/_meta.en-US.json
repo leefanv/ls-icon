@@ -5,28 +5,46 @@
   },
   "get-started": {
     "title": "Get Started",
-    "order": 1,
-    "group": "guide",
+    "order": 100,
+    "group": "one",
     "icon": "LightingIcon"
   },
   "community": {
     "title": "Community",
-    "order": 2,
-    "group": "guide",
+    "order": 101,
+    "group": "one",
     "icon": "GitIcon"
+  },
+  "design": {
+    "title": "Design",
+    "order": 200,
+    "group": "two",
+    "icon": "MagicIcon"
+  },
+  "develop": {
+    "title": "Develop",
+    "order": 201,
+    "group": "two",
+    "icon": "CodeIcon"
+  },
+  "components": {
+    "title": "Components",
+    "order": 300,
+    "group": "three",
+    "icon": "ComponentIcon"
+  },
+  "cli": {
+    "title": "CLI",
+    "order": 301,
+    "group": "three",
+    "icon": "CliIcon"
   },
   "markdown": {
     "title": "Markdown",
     "description": "This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete.",
-    "group": "guide",
-    "order": 3,
+    "group": "demo",
+    "order": 400,
     "icon": "LightingIcon",
     "showMeta": true
-  },
-  "components": {
-    "title": "Components",
-    "order": 1,
-    "group": "two",
-    "icon": "ComponentIcon"
   }
 }

@@ -4,6 +4,9 @@ import Logo from "./components/logo/Logo";
 import LightingIcon from "./assets/icons/lighting.svg";
 import GitIcon from "./assets/icons/git.svg";
 import ComponentIcon from "./assets/icons/components.svg";
+import CliIcon from "./assets/icons/cli.svg";
+import MagicIcon from "./assets/icons/magic.svg";
+import CodeIcon from "./assets/icons/code.svg";
 
 const themeConfig: ThemeConfig = {
   logo: <Logo />,
@@ -13,7 +16,7 @@ const themeConfig: ThemeConfig = {
   links: [
     {
       title: "Document",
-      url: "/get-started",
+      url: "/get-started/introduction",
     },
     {
       title: "Roadmap",
@@ -27,13 +30,7 @@ const themeConfig: ThemeConfig = {
 
   footerLinks: [],
 
-  socials: [
-    {
-      title: "Twitter",
-      icon: <GitIcon />,
-      url: "http://www.baidu.com",
-    }
-  ],
+  socials: [],
 
   algolia: {
     appId: 'R2IYF7ETH7',
@@ -45,6 +42,9 @@ const themeConfig: ThemeConfig = {
     LightingIcon: <LightingIcon />,
     GitIcon: <GitIcon />,
     ComponentIcon: <ComponentIcon />,
+    CliIcon: <CliIcon />,
+    MagicIcon: <MagicIcon />,
+    CodeIcon: <CodeIcon />,
   },
 
   language: {
@@ -52,7 +52,7 @@ const themeConfig: ThemeConfig = {
       links: [
         {
           title: "文档",
-          url: "/get-started",
+          url: "/get-started/introduction",
         },
         {
           title: "计划",

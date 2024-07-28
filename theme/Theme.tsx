@@ -1,6 +1,7 @@
 import type { NextraThemeLayoutProps } from "nextra";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Head from 'next/head'
 import classNames from "classnames";
 
 import { ThemeConfig } from "./type";
@@ -45,6 +46,8 @@ export default function Theme({
   const showSubMenuPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showSubMenu);
   const isFullScreen = !!activePage.meta.fullScreen;
 
+  const title = breadcrumbs.slice(1, 3).reverse().map(breadcrumb => breadcrumb.title).join(' · ')
+
   return (
     <Layout
       isFullScreen={isFullScreen}
@@ -59,6 +62,9 @@ export default function Theme({
       }
       right={<Aside pageOpts={pageOpts} themeConfig={localeThemeConfig} />}
     >
+      <Head>
+        <title>{`${title} with Wis Design System`}</title>
+      </Head>
       {isFullScreen && children}
       {!isFullScreen && (
         <>
