@@ -6,12 +6,13 @@ import styles from "./Layout.module.scss";
 interface LayoutProps {
   isFullScreen: boolean;
   header: ReactNode;
+  footer: ReactNode;
   left?: ReactNode;
   right?: ReactNode;
   children: ReactNode;
 }
 
-function Layout({ isFullScreen, header, left, right, children }: LayoutProps) {
+function Layout({ isFullScreen, header, footer, left, right, children }: LayoutProps) {
   const hasLeft = !!left;
   const hasRight = !!right;
 
@@ -37,7 +38,10 @@ function Layout({ isFullScreen, header, left, right, children }: LayoutProps) {
       </div>
       <main className={styles.main}>
         <div className={styles.container}>
-          <div className={styles.content}>{children}</div>
+          <div className={styles.content}>
+            {children}
+            <footer>{footer}</footer>
+          </div>
         </div>
       </main>
     </>

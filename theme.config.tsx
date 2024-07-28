@@ -25,15 +25,14 @@ const themeConfig: ThemeConfig = {
     },
   ],
 
-  footerLinks: [
+  footerLinks: [],
+
+  socials: [
     {
-      title: "Document",
-      url: "/get-started",
-    },
-    {
-      title: "Roadmap",
+      title: "Twitter",
+      icon: <GitIcon />,
       url: "http://www.baidu.com",
-    },
+    }
   ],
 
   algolia: {

@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import { ThemeConfig } from "./type";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Nav from "./components/nav/Nav";
 import Aside from "./components/aside/Aside";
 import Breadcrumbs from "./components/breadcrumbs/Breadcrumbs";
@@ -43,12 +44,12 @@ export default function Theme({
   const showMetaPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showMeta);
   const showSubMenuPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showSubMenu);
   const isFullScreen = !!activePage.meta.fullScreen;
-  const isShowBreadCrumbs = breadcrumbs.length > 1;
 
   return (
     <Layout
       isFullScreen={isFullScreen}
       header={<Header themeConfig={localeThemeConfig} />}
+      footer={<Footer themeConfig={localeThemeConfig} />}
       left={
         <Nav
           pageGroups={pageGroups}
@@ -61,7 +62,7 @@ export default function Theme({
       {isFullScreen && children}
       {!isFullScreen && (
         <>
-          {isShowBreadCrumbs && <Breadcrumbs data={breadcrumbs} />}
+          <Breadcrumbs data={breadcrumbs} />
           {showMetaPage && <Meta {...showMetaPage.meta} />}
           {showSubMenuPage && !!showSubMenuPage.children?.length && (
             <div className={styles.links}>

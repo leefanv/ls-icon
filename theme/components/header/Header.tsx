@@ -47,11 +47,11 @@ export default function Header({ themeConfig }: HeaderProps) {
           <>
             <div className={styles.divide}></div>
             <a
-              className={styles.link}
+              className={styles.github}
               href={themeConfig.github}
               target="__blank"
             >
-              <GithubIcon className={styles.github} />
+              <GithubIcon className={styles.icon} />
             </a>
           </>
         )}

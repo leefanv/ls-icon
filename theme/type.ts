@@ -28,6 +28,12 @@ interface Icon {
   [propName: string]: ReactElement;
 }
 
+interface Social {
+  title: string;
+  icon: ReactNode;
+  url: string;
+}
+
 export type ThemeConfig = {
   // site logo
   logo: ReactNode;
@@ -36,13 +42,16 @@ export type ThemeConfig = {
   links: Link[];
 
   // site footer links
-  footerLinks: Link[];
+  footerLinks?: Link[];
 
   // algolia search
   algolia: Algolia;
 
   // github
   github?: string;
+
+  // social media
+  socials?: Social[];
 
   icons?: Icon;
 

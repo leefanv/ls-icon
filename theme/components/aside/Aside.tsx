@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import classNames from "classnames";
 import { Button } from '@headlessui/react';
 import useWindowScroll from "beautiful-react-hooks/useWindowScroll";
+
 import PlaceholderIcon from "../../../assets/icons/placeholder.svg";
 import TopIcon from "../../../assets/icons/top.svg";
 
@@ -21,7 +22,7 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
   const t = useTranslations();
   const onWindowScroll = useWindowScroll();
 
-  onWindowScroll((event) => {
+  onWindowScroll(() => {
     const head = pageOpts.headings.find((head) => {
       const element = document.getElementById(head.id);
       const { top } = element.getBoundingClientRect();
@@ -49,6 +50,14 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
     }, 10)
   }
 
+  function handleSetActive(id) {
+    setActiveId(id)
+    setTimeout(() => {
+      const scrollElement = document.documentElement || document.body;
+      scrollElement.scrollTop = Math.max(scrollElement.scrollTop - 64, 0);
+    }, 0)
+  }
+
   return (
     <div className={styles.aside}>
       <div className={styles.title}>{t("sideTitle")}</div>
@@ -61,7 +70,7 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
             })}
             style={{ textIndent: `${(head.depth - 2) * 16}px` }}
             href={`#${head.id}`}
-            onClick={() => setActiveId(head.id)}
+            onClick={() => handleSetActive(head.id)}
           >
             {head.value}
           </a>

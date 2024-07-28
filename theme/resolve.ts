@@ -138,6 +138,10 @@ export function getActivePage(pages = [], route) {
 
 export function getPageBreadcrumbs(pages = [], route) {
   let breadcrumbs = [];
+
+  const homeBreadcrumb = pages.find((page) => page.path === '/');
+  breadcrumbs.push(homeBreadcrumb);
+
   let nextPages = pages.filter(page => page.path !== '/');
   while (nextPages.length) {
     const page = nextPages.find((page) => route.startsWith(page.path));
@@ -149,6 +153,7 @@ export function getPageBreadcrumbs(pages = [], route) {
 
     nextPages = [];
   }
+
   return breadcrumbs;
 }
 
