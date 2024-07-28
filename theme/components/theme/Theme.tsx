@@ -7,9 +7,17 @@ import DarkIcon from "../../../assets/icons/dark.svg";
 import styles from "./Theme.module.scss"
 
 function Theme() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState(getSystemTheme());
+
+  useEffect(() => {
+    setFramesTheme(mode);
+  }, [mode])
 
   function getSystemTheme() {
+    if (!process.browser) {
+      return 'light'
+    }
+
     const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)')
     
     if (mediaQueryListDark.matches) {
@@ -19,16 +27,24 @@ function Theme() {
     return 'light'
   }
 
-  useEffect(() => {
-    const mode = getSystemTheme()
-    if (mode !== 'light') {
-      handleChange()
+  function setFramesTheme(mode) {
+    setFrameTheme(window, mode)
+
+    Array.prototype.forEach.call(window.frames, (frame) => {
+      setFrameTheme(frame, mode);
+    }) 
+  }
+
+  function setFrameTheme(frame, mode) {
+    if (mode === "light") {
+      frame.document.documentElement.removeAttribute("data-theme");
+    } else {
+      frame.document.documentElement.setAttribute("data-theme", mode);
     }
-  }, [])
+  }
 
   function handleChange() {
     const nextMode = mode === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", nextMode);
     setMode(nextMode);
   }
 

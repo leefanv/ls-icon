@@ -1,0 +1,40 @@
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.phone {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  box-sizing: content-box;
+  border: 16px solid var(--wd-border-color-inverse);
+  border-radius: 40px;
+  padding: 24px 0;
+  margin: 16px 0;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 72px;
+    right: -18px;
+    width: 3px;
+    height: 42px;
+    background: var(--wd-border-color-inverse);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 140px;
+    right: -18px;
+    width: 4px;
+    height: 88px;
+    background: var(--wd-border-color-inverse);
+  }
+}

@@ -1,19 +1,30 @@
 {
+  "index": {
+    "fullScreen": true
+  },
   "get-started": {
     "title": "Get Started",
     "order": 1,
-    "group": "one",
+    "group": "guide",
     "icon": "LightingIcon"
+  },
+  "markdown": {
+    "title": "Markdown",
+    "description": "本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全",
+    "group": "guide",
+    "order": 2,
+    "icon": "LightingIcon",
+    "showMeta": true
   },
   "community": {
     "title": "Community",
-    "order": 2,
-    "group": "one",
+    "order": 3,
+    "group": "guide",
     "icon": "GitIcon"
   },
   "components": {
     "title": "Components",
-    "order": 3,
+    "order": 1,
     "group": "two",
     "icon": "ComponentIcon"
   }

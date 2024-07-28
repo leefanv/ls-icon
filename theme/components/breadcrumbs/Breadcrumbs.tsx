@@ -16,6 +16,10 @@ type BreadcrumbsProps = {
 
 
 function Breadcrumbs({ data }: BreadcrumbsProps) {
+  if (data.length <= 1) {
+    return null
+  }
+
   return (
     <div className={styles.breadcrumbs}>
       {data.map((breadcrumb, index) => {

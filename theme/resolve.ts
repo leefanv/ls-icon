@@ -29,7 +29,7 @@ interface Meta {
 }
 
 export function resolvePages(pageMap = [], locale) {
-  const meta = pageMap.find((item) => item.kind === "Meta") || {};
+  const meta = pageMap.find((item) => item.kind === "Meta" && item.locale === locale) || {};
   const pages = pageMap.reduce((result, { ...item }) => {
     if (item.locale && item.locale !== locale) {
       return result;
@@ -118,10 +118,14 @@ export function groupPages(pages = []) {
 }
 
 export function getActivePage(pages = [], route) {
+  if (route === '/') {
+    return pages.find((page) => page.path === route);
+  }
+
   let activePage;
-  let nextPages = pages;
+  let nextPages = pages.filter(page => page.path !== '/');
   while (nextPages.length) {
-    activePage = nextPages.find((page) => route.startsWith(page.path));
+    activePage = nextPages.find((page) => route.startsWith(page.path))
     if (activePage) {
       nextPages = activePage.children;
       continue;
@@ -134,7 +138,7 @@ export function getActivePage(pages = [], route) {
 
 export function getPageBreadcrumbs(pages = [], route) {
   let breadcrumbs = [];
-  let nextPages = pages;
+  let nextPages = pages.filter(page => page.path !== '/');
   while (nextPages.length) {
     const page = nextPages.find((page) => route.startsWith(page.path));
     if (page) {

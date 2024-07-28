@@ -1,8 +1,6 @@
-const ModuleFederationWebpackPlugin = require("@module-federation/nextjs-mf");
 const withNextra = require("nextra")({
   theme: "./theme/Theme.tsx",
   themeConfig: "./theme.config.tsx",
-  defaultShowCopyCode: true,
 });
 
 module.exports = withNextra({
@@ -28,18 +26,6 @@ module.exports = withNextra({
         },
       ],
     });
-
-    config.plugins.push(
-      new ModuleFederationWebpackPlugin({
-        name: "website",
-        remotes: {
-          wis: `wis@http://localhost:3001/remote.js`,
-        },
-        force: true,
-        filename: "remote.js",
-        exposes: {},
-      })
-    );
     return config;
   },
 });

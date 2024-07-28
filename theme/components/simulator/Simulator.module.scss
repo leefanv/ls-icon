@@ -1,0 +1,58 @@
+.simulator {
+  margin: 12px 0;
+  border: 1px solid var(--wd-border-color-01);
+  border-radius: var(--wd-border-radius-m);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid var(--wd-border-color-01);
+  padding: 0 16px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: var(--wd-border-radius-s);
+  font-size: var(--wd-font-size-xs);
+
+  &:hover {
+    background: var(--wd-background-color-01);
+  }
+
+  &.active {
+    background: var(--wd-background-color-01);
+  }
+}
+
+.text {
+  margin: 0 0 0 6px;
+}
+
+.code {
+  > pre {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--wd-border-color-01);
+    border-radius: 0;
+  }
+}

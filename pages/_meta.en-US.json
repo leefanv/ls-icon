@@ -5,18 +5,26 @@
   "get-started": {
     "title": "Get Started",
     "order": 1,
-    "group": "one",
+    "group": "guide",
     "icon": "LightingIcon"
   },
   "community": {
     "title": "Community",
     "order": 2,
-    "group": "one",
+    "group": "guide",
     "icon": "GitIcon"
+  },
+  "markdown": {
+    "title": "Markdown",
+    "description": "This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete.",
+    "group": "guide",
+    "order": 3,
+    "icon": "LightingIcon",
+    "showMeta": true
   },
   "components": {
     "title": "Components",
-    "order": 3,
+    "order": 1,
     "group": "two",
     "icon": "ComponentIcon"
   }

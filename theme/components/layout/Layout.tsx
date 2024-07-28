@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import classNames from "classnames";
 
 import styles from "./Layout.module.scss";
 
@@ -31,8 +32,8 @@ function Layout({ isFullScreen, header, left, right, children }: LayoutProps) {
         <div className={styles.container}>{header}</div>
       </header>
       <div className={styles.aside}>
-        {hasLeft && <div className={styles.left}>{left}</div>}
-        {hasRight && <div className={styles.right}>{right}</div>}
+        {hasLeft && <div className={classNames(styles.left, 'scroll')}>{left}</div>}
+        {hasRight && <div className={classNames(styles.right, 'scroll')}>{right}</div>}
       </div>
       <main className={styles.main}>
         <div className={styles.container}>

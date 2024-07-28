@@ -33,11 +33,6 @@ export default function Theme({
     ...localeConfig,
   };
 
-  if (pageOpts.route === "/index") {
-    return;
-  }
-  const isIndex = pageOpts.route === "/";
-
   const { pageMap } = pageOpts;
   const pages = resolvePages(pageMap, router.locale);
   const pageGroups = groupPages(pages.filter((page) => page.name !== "index"));
@@ -47,24 +42,26 @@ export default function Theme({
   const reverseBreadcrumbs = breadcrumbs.slice().reverse();
   const showMetaPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showMeta);
   const showSubMenuPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showSubMenu);
+  const isFullScreen = !!activePage.meta.fullScreen;
+  const isShowBreadCrumbs = breadcrumbs.length > 1;
 
   return (
     <Layout
-      isFullScreen={activePage.meta.fullScreen}
+      isFullScreen={isFullScreen}
       header={<Header themeConfig={localeThemeConfig} />}
       left={
-        !isIndex && <Nav
+        <Nav
           pageGroups={pageGroups}
           pageOpts={pageOpts}
           themeConfig={localeThemeConfig}
         />
       }
-      right={!isIndex && <Aside pageOpts={pageOpts} themeConfig={localeThemeConfig} />}
+      right={<Aside pageOpts={pageOpts} themeConfig={localeThemeConfig} />}
     >
-      {isIndex && children}
-      {!isIndex && (
+      {isFullScreen && children}
+      {!isFullScreen && (
         <>
-          <Breadcrumbs data={breadcrumbs} />
+          {isShowBreadCrumbs && <Breadcrumbs data={breadcrumbs} />}
           {showMetaPage && <Meta {...showMetaPage.meta} />}
           {showSubMenuPage && !!showSubMenuPage.children?.length && (
             <div className={styles.links}>

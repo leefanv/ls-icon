@@ -22,7 +22,7 @@
   outline: none;
 }
 
-.DocSearch-Button:focus {
+.DocSearch-Button:focus-visible {
   outline: 1px solid var(--wd-border-color-brand);
   outline-offset: 1px;
 }
@@ -73,11 +73,9 @@
 }
 
 /* Body modifier */
-
-.DocSearch--active {
+html:has(body.DocSearch--active) {
   overflow: hidden;
 }
-
 /* Container & Modal */
 
 .DocSearch-Container,
@@ -248,9 +246,11 @@
       var(--docsearch-spacing) - var(--docsearch-footer-height)
   );
   min-height: var(--docsearch-spacing);
-  overflow-y: auto; /* firefox */
-  overflow-y: overlay;
   padding: 0 var(--docsearch-spacing);
+  scrollbar-color: var(--wd-border-color-01) transparent;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
 }
 
 .DocSearch-Dropdown::-webkit-scrollbar {

@@ -7,12 +7,26 @@ html {
   background: var(--wd-background-color-default);
   color: var(--wd-font-color-inverse);
   font-size: var(--wd-font-size-sm);
-  scrollbar-color: var(--wd-border-color-01) var(--wd-background-color-default);
+  scrollbar-color: var(--wd-border-color-01) transparent;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+.scroll {
+  scrollbar-color: var(--wd-border-color-01) transparent;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
 }
 
 body {
   font-family: var(--wd-font-sans);
-  font-size: 14px;
+  font-size: var(--wd-font-size-sm);
   text-align: left;
 
   padding: 0;
@@ -34,6 +48,22 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 a {
@@ -62,7 +92,7 @@ li {
 code {
   font-family: var(--wd-font-code);
   background: var(--wd-background-color-01);
-  padding: 4px;
+  padding: 0 4px;
   border-radius: var(--wd-border-radius-s);
   border: 1px solid var(--wd-border-color-01);
 }
@@ -97,6 +127,7 @@ code[data-line-numbers] .line:before {
   width: 40px;
   margin: 0 0 0 4px;
   color: var(--wd-font-color-helper);
+  font-size: var(--wd-font-size-xs);
 }
 
 pre {
@@ -108,6 +139,7 @@ pre {
 }
 
 pre code {
+  display: block;
   background: transparent;
   border: none;
   border-radius: none;
@@ -165,8 +197,8 @@ ul.contains-task-list li.task-list-item {
   padding: 4px 0;
 }
 
-a:focus,
-button:focus {
+a:focus-visible,
+button:focus-visible {
   outline: 1px solid var(--wd-border-color-brand);
   outline-offset: 1px;
 }
