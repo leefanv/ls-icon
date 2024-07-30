@@ -16,13 +16,19 @@
   width: 100%;
   height: 36px;
   line-height: 36px;
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   &.active {
     color: var(--wd-font-color-brand);
+  }
+  &.active:hover {
+    color: var(--wd-font-color-brand);
+  }
+  &:hover {
+    color: var(--wd-font-color-03);
   }
 }
 
@@ -43,11 +49,18 @@
     height: 18px;
     font-size: var(--wd-font-size-sm);
     color: var(--wd-font-color-helper);
+    &:hover {
+      color: var(--wd-font-color-03);
+    }
 
     .icon {
       color: var(--wd-font-color-helper);
       margin: 0 0 0 4px;
       font-size: var(--wd-font-size-sm);
+      &:hover {
+        color: var(--wd-font-color-03);
+      }
     }
+  
   }
 }

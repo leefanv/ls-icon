@@ -20,7 +20,7 @@ const themeConfig: ThemeConfig = {
     },
     {
       title: "Roadmap",
-      url: "http://www.baidu.com",
+      url: "https://wis.featurebase.app/",
     },
     {
       title: "Releases",

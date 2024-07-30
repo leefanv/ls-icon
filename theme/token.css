@@ -20,6 +20,7 @@
   
   --wd-border-color-01: var(--wd-palette-gray-20);
   --wd-border-color-inverse: var(--wd-palette-common-black);
+  --wd-background-scrollbar: rgba(15, 23, 42, 0.30);
   --wd-background-transparent: hsla(0, 0%, 100%, 0.8);
   --wd-background-color-01: var(--wd-palette-gray-10);
   --wd-border-color-02: var(--wd-palette-gray-30);
@@ -43,7 +44,7 @@
   --wd-font-color-02: var(--wd-palette-gray-80);
   --wd-font-color-03: var(--wd-palette-gray-90);
   --wd-font-color-brand: var(--wd-palette-common-brand);
-  --wd-font-color-helper: var(--wd-palette-gray-40);
+  --wd-font-color-helper: var(--wd-palette-gray-50);
   --wd-font-color-inverse: var(--wd-palette-common-black);
   --wd-font-color-white: var(--wd-palette-common-white);
   --wd-font-size-base: 16px;
@@ -75,6 +76,7 @@ html[data-theme='dark'] {
 
   --wd-border-color-01: rgba(255, 255, 255, 0.10);
   --wd-border-color-inverse: var(--wd-palette-common-white);
+  --wd-background-scrollbar: rgba(255, 255, 255, 0.30);
   --wd-background-transparent: hsla(222, 47%, 11%, 0.8);
   --wd-background-color-01: rgba(255, 255, 255, 0.05);
   --wd-border-color-02: rgba(255, 255, 255, 0.20);

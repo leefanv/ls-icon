@@ -7,10 +7,10 @@ html {
   background: var(--wd-background-color-default);
   color: var(--wd-font-color-inverse);
   font-size: var(--wd-font-size-sm);
-  scrollbar-color: var(--wd-border-color-01) transparent;
+  scrollbar-color: var(--wd-background-scrollbar) var(--wd-background-color-01) ;
   overflow: auto;
   scrollbar-gutter: stable;
-  scrollbar-width: thin;
+  scrollbar-width: 14px;
 }
 
 html[data-theme="dark"] {
@@ -95,7 +95,7 @@ code {
   font-family: var(--wd-font-code);
   background: var(--wd-background-color-01);
   padding: 0 4px;
-  border-radius: var(--wd-border-radius-s);
+  border-radius: var(--wd-border-radius-m);
   border: 1px solid var(--wd-border-color-01);
 }
 
@@ -136,7 +136,7 @@ pre {
   position: relative;
   background: var(--wd-background-color-01);
   padding: 12px;
-  border-radius: var(--wd-border-radius-s);
+  border-radius: var(--wd-border-radius-m);
   border: 1px solid var(--wd-border-color-01);
 }
 
@@ -157,7 +157,7 @@ table {
   border-spacing: 0;
   width: 100%;
   border: 1px solid var(--wd-border-color-01);
-  border-radius: var(--wd-border-radius-s);
+  border-radius: var(--wd-border-radius-m);
 }
 
 table thead {
@@ -176,6 +176,7 @@ table tr {
 
 table td {
   padding: 8px 16px;
+  color: var(--wd-font-color-02);
 }
 
 table tbody tr:not(:last-child) td {
@@ -184,6 +185,8 @@ table tbody tr:not(:last-child) td {
 
 img {
   max-width: 100%;
+  border: 1px solid var(--wd-border-color-01);
+  border-radius: var(--wd-border-radius-m);
 }
 
 ul.contains-task-list {
