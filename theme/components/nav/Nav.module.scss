@@ -32,13 +32,13 @@
     .icon {
       background: var(--wd-background-color-brand);
       color: var(--wd-font-color-white);
+      box-shadow: none;
     }
   }
   &:hover {
     color: var(--wd-font-color-03);
     .icon {
-      background: var(--wd-background-color-brand);
-      color: var(--wd-font-color-white);
+      box-shadow:  0 0 0 1px var(--wd-border-color-01);
     }
   }
 }
