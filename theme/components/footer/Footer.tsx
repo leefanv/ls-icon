@@ -11,7 +11,7 @@ function Footer({ themeConfig }: FooterProps) {
   return (
     <div className={styles.footer}>
       <div className={styles.copyright}>
-        Copyright @ {new Date().getFullYear()} Wis Design System
+        Copyright © {new Date().getFullYear()} Wis Design System
       </div>
       <div className={styles.social}>
         <a className={styles.link} href={themeConfig.github} target="__blank">

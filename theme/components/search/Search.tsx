@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import docsearch from "@docsearch/js";
+import { useTranslations } from "next-intl";
 
 import type { ThemeConfig } from "../../type";
 
@@ -8,9 +9,13 @@ type SearchProps = {
 };
 
 function Search({ themeConfig }: SearchProps) {
+  const t = useTranslations();
+
   useEffect(() => {
     docsearch({
       container: "#search",
+      translations: t.raw('docSearch'),
+      placeholder: t('docSearch.placeholder'),
       ...themeConfig.algolia,
     });
   }, []);
