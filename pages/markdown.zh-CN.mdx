@@ -87,3 +87,15 @@ import Simulator from "@/theme/components/simulator/Simulator";
   ```
   </Simulator.Code>
 </Simulator>
+
+import FileTree from "@/theme/components/fileTree/FileTree";
+
+<FileTree>
+  <FileTree.Folder defaultOpen name="pages" content="本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全">
+    <FileTree.File name="markdown.mdx" content="本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全" />
+    <FileTree.File name="_app.mdx" />
+    <FileTree.Folder name="components">
+      <FileTree.File name="input.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>

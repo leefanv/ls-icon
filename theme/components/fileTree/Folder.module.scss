@@ -1,0 +1,34 @@
+.folder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+}
+
+.title {
+  flex: 0 0 auto;
+}
+
+.description {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--wd-font-color-helper);
+  margin: 0 0 0 8px;
+}
+
+.icon {
+  margin: 0 8px 0 0;
+  flex: 0 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px 0;
+  padding: 0 0 0 24px;
+}
