@@ -39,10 +39,6 @@ export default function (agent = "pc", style = '') {
           border: none;
         }
 
-        #root {
-          height: 1000px;
-        }
-
         ${style}
       </style>
       <script>

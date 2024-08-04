@@ -1,63 +1,90 @@
 .steps {
   position: relative;
   counter-reset: step;
-  padding: 6px 0 0 24px;
+  padding: 8px 0 0 24px;
   margin: 0 0 0 16px;
   border-left: 1px solid var(--wd-border-color-01);
 
   h2,
   h3,
   h4 {
+    position: relative;
     counter-increment: step;
     margin: 0;
 
-    &::before {
+    &::after {
       position: absolute;
-      left: 0;
       display: flex;
+      top: 0;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       content: counter(step);
       transform: translateX(-50%);
       color: var(--wd-font-color-helper);
-      border: 4px solid var(--wd-background-color-default);
+      border: 1px solid var(--wd-border-color-01);
       background: var(--wd-background-color-01);
       border-radius: 50%;
       box-sizing: border-box;
       font-weight: 400;
+    }
+
+    &::before {
+      position: absolute;
+      top: -3px;
+      content: "";
+      width: 1px;
     }
   }
 
   h2 {
     margin: 0 0 24px 0;
 
-    &::before {
+    &::after {
       width: 32px;
       height: 32px;
+      left: -25px;
       font-size: var(--wd-font-size-base);
+    }
+
+    &::before {
+      height: 38px;
+      left: -25px;
+      background: var(--wd-background-color-default);
     }
   }
 
   h3 {
     margin: 0 0 20px 0;
 
-    &::before {
-      margin: -2px 0 0 0;
+    &::after {
       width: 28px;
       height: 28px;
+      left: -24px;
       font-size: var(--wd-font-size-sm);
+    }
+
+    &::before {
+      height: 34px;
+      left: -25px;
+      background: var(--wd-background-color-default);
     }
   }
 
   h4 {
     margin: 0 0 20px 0;
 
-    &::before {
-      margin: -2px 0 0 0;
+    &::after {
       width: 22px;
       height: 22px;
+      left: -24px;
       font-size: var(--wd-font-size-xs);
+    }
+
+    &::before {
+      height: 28px;
+      left: -25px;
+      background: var(--wd-background-color-default);
     }
   }
 }
