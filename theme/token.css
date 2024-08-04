@@ -52,6 +52,7 @@
   --wd-font-size-xs: 12px;
   --wd-set-logo-liner-a: var(--wd-palette-common-brand);
   --wd-set-logo-liner-b: var(--wd-palette-common-brand-transparent);
+  --wd-glass-background-color: rgba(255, 255, 255, 0.5);
 }
 
 html[data-theme='dark'] {
@@ -86,7 +87,7 @@ html[data-theme='dark'] {
   --wd-border-color-icon: #FFFFFF;
   --wd-background-color-03: rgba(255, 255, 255, 0.15);
   --wd-background-color-default: var(--wd-palette-common-black);
-  --wd-background-color-body: #0F172A;
+  --wd-background-color-body: rgb(15, 23, 42);
   --wd-background-color-brand: var(--wd-palette-common-brand);
   --wd-border-radius-xs: 2px;
   --wd-border-radius-s: 4px;
@@ -108,4 +109,5 @@ html[data-theme='dark'] {
   --wd-font-size-xs: 12px;
   --wd-set-logo-liner-a: var(--wd-palette-common-white);
   --wd-set-logo-liner-b: var(--wd-palette-common-white-transparent);
+  --wd-glass-background-color: rgba(15, 23, 42, 0.5);
 }

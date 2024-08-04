@@ -1,4 +1,4 @@
-export default function (agent = "pc") {
+export default function (agent = "pc", style = '') {
   let theme = "light";
   if (typeof window !== "undefined") {
     theme = document.documentElement.getAttribute("data-theme") || theme;
@@ -30,9 +30,7 @@ export default function (agent = "pc") {
         html {
           height: 100%;
           overflow: auto;
-          scrollbar-color: var(--wd-border-color-01) transparent;
-          scrollbar-gutter: stable;
-          scrollbar-width: thin;
+          scrollbar-width: none;
         }
         
         body {
@@ -40,6 +38,12 @@ export default function (agent = "pc") {
           margin: 0;
           border: none;
         }
+
+        #root {
+          height: 1000px;
+        }
+
+        ${style}
       </style>
       <script>
         window.$$AGENT = '${agent}';
