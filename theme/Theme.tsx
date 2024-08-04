@@ -1,8 +1,9 @@
 import type { NextraThemeLayoutProps } from "nextra";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from 'next/head'
+import Head from "next/head";
 import classNames from "classnames";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
 
 import { ThemeConfig } from "./type";
 import Header from "./components/header/Header";
@@ -13,7 +14,12 @@ import Breadcrumbs from "./components/breadcrumbs/Breadcrumbs";
 import Meta from "./components/meta/Meta";
 import Layout from "./components/layout/Layout";
 
-import { resolvePages, groupPages, getPageBreadcrumbs, getActivePage } from "./resolve";
+import {
+  resolvePages,
+  groupPages,
+  getPageBreadcrumbs,
+  getActivePage,
+} from "./resolve";
 
 import styles from "./Theme.module.scss";
 
@@ -26,6 +32,7 @@ export default function Theme({
   pageOpts,
   themeConfig: { language = {}, ...themeConfig },
 }: ThemeProps) {
+  const onHashChange = useGlobalEvent("hashchange");
   const router = useRouter();
 
   const localeConfig = language[router.locale];
@@ -42,11 +49,24 @@ export default function Theme({
   const activePage = getActivePage(pages, pageOpts.route);
 
   const reverseBreadcrumbs = breadcrumbs.slice().reverse();
-  const showMetaPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showMeta);
-  const showSubMenuPage = reverseBreadcrumbs.find((breadcrumb) => breadcrumb.meta.showSubMenu);
+  const showMetaPage = reverseBreadcrumbs.find(
+    (breadcrumb) => breadcrumb.meta.showMeta
+  );
+  const showSubMenuPage = reverseBreadcrumbs.find(
+    (breadcrumb) => breadcrumb.meta.showSubMenu
+  );
   const isFullScreen = !!activePage.meta.fullScreen;
 
-  const title = breadcrumbs.slice(1, 3).reverse().map(breadcrumb => breadcrumb.title).join(' · ')
+  const title = breadcrumbs
+    .slice(1, 3)
+    .reverse()
+    .map((breadcrumb) => breadcrumb.title)
+    .join(" · ");
+
+  onHashChange(() => {
+    const scrollElement = document.documentElement || document.body;
+    scrollElement.scrollTop = Math.max(scrollElement.scrollTop - 64, 0);
+  });
 
   return (
     <Layout

@@ -88,14 +88,129 @@ import Simulator from "@/theme/components/simulator/Simulator";
   </Simulator.Code>
 </Simulator>
 
+#### FileTree
 import FileTree from "@/theme/components/fileTree/FileTree";
 
 <FileTree>
-  <FileTree.Folder defaultOpen name="pages" content="本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全">
-    <FileTree.File name="markdown.mdx" content="本文档罗列了目前已支持的Markdown语法及自定义组件用法案例，如遇到未涉及的语法需要开发进行补全" />
+  <FileTree.Folder defaultOpen name="pages" content="This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete.">
+    <FileTree.File name="markdown.mdx" content="This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete." />
     <FileTree.File name="_app.mdx" />
     <FileTree.Folder name="components">
       <FileTree.File name="input.mdx" />
     </FileTree.Folder>
   </FileTree.Folder>
 </FileTree>
+
+#### Steps
+import Steps from "@/theme/components/steps/Steps";
+
+<Steps>
+## Step 1
+ 
+Contents for step 1.
+ 
+## Step 2
+ 
+Contents for step 2.
+</Steps>
+
+<Steps>
+### Step 1
+ 
+Contents for step 1.
+ 
+### Step 2
+ 
+Contents for step 2.
+</Steps>
+
+<Steps>
+#### Step 1
+ 
+Contents for step 1.
+ 
+#### Step 2
+ 
+Contents for step 2.
+</Steps>
+
+#### Callout
+import Callout from "@/theme/components/callout/Callout";
+
+<Callout emoji="👾">
+  **Default Type** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+</Callout>
+
+<Callout type="info" emoji="👾">
+  **Info Type** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+</Callout>
+
+<Callout type="warning" emoji="👾">
+  **Warning Type** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+</Callout>
+
+<Callout type="error" emoji="👾">
+  **Error Type** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+  shoot 'em up arcade game developed by Tomohiro
+</Callout>
+
+#### Cards
+import Cards from "@/theme/components/cards/Cards";
+import GitIcon from "@/assets/icons/git.svg";
+
+<Cards>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="#strong">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="/markdown#card">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="/markdown#card">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+</Cards>
+
+<Cards>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="/markdown#card">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="/markdown#card">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+  <Cards.Card icon={<GitIcon />} title="Card Title" href="/markdown#card">
+    Nishikado.
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+    shoot 'em up arcade game developed by Tomohiro
+  </Cards.Card>
+</Cards>

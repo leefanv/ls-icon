@@ -2,7 +2,7 @@ import type { PageOpts } from "nextra";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import classNames from "classnames";
-import { Button } from '@headlessui/react';
+import { Button } from "@headlessui/react";
 import useWindowScroll from "beautiful-react-hooks/useWindowScroll";
 
 import PlaceholderIcon from "../../../assets/icons/placeholder.svg";
@@ -37,25 +37,17 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
 
   function handleToTop() {
     const scrollElement = document.documentElement || document.body;
-    
+
     let scrollTop = scrollElement.scrollTop;
     const step = Math.max(scrollTop / 100, 100);
     let timer = setInterval(() => {
       scrollTop = Math.max(scrollTop - step, 0);
-      scrollElement.scrollTop = scrollTop
+      scrollElement.scrollTop = scrollTop;
       if (scrollTop <= 0) {
-        clearInterval(timer)
-        timer = null
+        clearInterval(timer);
+        timer = null;
       }
-    }, 10)
-  }
-
-  function handleSetActive(id) {
-    setActiveId(id)
-    setTimeout(() => {
-      const scrollElement = document.documentElement || document.body;
-      scrollElement.scrollTop = Math.max(scrollElement.scrollTop - 64, 0);
-    }, 0)
+    }, 10);
   }
 
   return (
@@ -70,7 +62,6 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
             })}
             style={{ textIndent: `${(head.depth - 2) * 16}px` }}
             href={`#${head.id}`}
-            onClick={() => handleSetActive(head.id)}
           >
             {head.value}
           </a>
@@ -79,7 +70,11 @@ function Aside({ pageOpts, themeConfig }: AsideProps) {
       <div className={styles.bottom}>
         {themeConfig.footerLinks?.map((link) => {
           return (
-            <a key={link.title + link.url} className={styles.link} href={link.url}>
+            <a
+              key={link.title + link.url}
+              className={styles.link}
+              href={link.url}
+            >
               {link.title}
               <PlaceholderIcon className={styles.icon} />
             </a>

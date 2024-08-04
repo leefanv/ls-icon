@@ -12,7 +12,7 @@ function File({ name, content }: FileProps) {
     <div className={styles.file}>
       <FileIcon className={styles.icon} />
       <span className={styles.title}>{name}</span>
-      {content && <span className={styles.description}>{content}</span>}
+      {content && <span className={styles.description} title={content}>{content}</span>}
     </div>
   );
 }

@@ -1,0 +1,34 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--wd-border-color-01);
+  border-radius: var(--wd-border-radius-m);
+  color: var(--wd-font-color-inverse);
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    background: var(--wd-background-color-01);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+.content {
+  font-size: var(--wd-font-size-sm);
+  color: var(--wd-font-color-helper);
+}
+
+.icon {
+  margin: 0 8px 0 0;
+}

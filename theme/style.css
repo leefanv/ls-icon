@@ -204,6 +204,7 @@ ul.contains-task-list li.task-list-item {
 
 p {
   line-height: 20px;
+  font-size: var(--wd-font-size-base);
 }
 
 a:focus-visible,

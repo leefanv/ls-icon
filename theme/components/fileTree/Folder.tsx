@@ -29,7 +29,7 @@ function Folder({ name, content, defaultOpen, children }: FolderProps) {
                 <FolderIcon className={styles.icon} />
               )}
               <span className={styles.title}>{name}</span>
-              {content && <span className={styles.description}>{content}</span>}
+              {content && <span className={styles.description} title={content}>{content}</span>}
             </DisclosureButton>
             <DisclosurePanel className={styles.content}>
               {children}

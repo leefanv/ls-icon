@@ -12,7 +12,7 @@ module.exports = withNextra({
   webpack(config, options) {
     config.module.rules.push({
       test: /\.svg$/i,
-      issuer: /\.tsx?$/,
+      issuer: /\.(tsx|mdx)?$/,
       use: [
         {
           loader: "@svgr/webpack",
