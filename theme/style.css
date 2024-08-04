@@ -7,7 +7,6 @@ html {
   background: var(--wd-background-color-default);
   color: var(--wd-font-color-inverse);
   font-size: var(--wd-font-size-sm);
-  scrollbar-color: var(--wd-background-scrollbar) var(--wd-background-color-01) ;
   overflow: auto;
   scrollbar-gutter: stable;
   scrollbar-width: 14px;
@@ -15,6 +14,7 @@ html {
 
 html[data-theme="dark"] {
   color-scheme: dark;
+  scrollbar-color: var(--wd-background-scrollbar) var(--wd-background-color-01);
 }
 
 .scroll {
