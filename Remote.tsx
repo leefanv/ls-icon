@@ -1,4 +1,3 @@
-
 import { lazy, useState, useEffect } from "react";
 
 function check(data, type) {
@@ -20,10 +19,10 @@ function isString(data) {
 function getGlobal() {
   // @ts-ignore
   if (window.frames && window.frames[0].$$AGENT) {
-    return window.frames[0]
+    return window.frames[0];
   }
 
-  return window
+  return window;
 }
 
 function loadModule(scope, module) {
@@ -108,23 +107,27 @@ async function loadScopeScript(scope) {
   await loadScript(scopeRemoteUrl);
 }
 
-async function loadScopeComponent(scope, module) {
+async function loadScopeComponent(scope, module, name) {
   await loadScopeScript(scope);
   const ComponentLoader = loadModule(scope, module);
-  return lazy(ComponentLoader);
+  return lazy(() => {
+    return ComponentLoader().then((mod) => {
+      return { default: mod[name] };
+    });
+  });
 }
 
 function resolveRemote(remote) {
   const [_, ...modules] = remote.replace("remote:", "").split("/");
-  return './' + modules.join('/')
+  return "./" + modules.join("/");
 }
 
-export default function Remote({ is, ...props }) {
+export default function Remote({ is, exportName = "default", ...props }) {
   const [Component, setComponent] = useState(() => null);
 
   async function load() {
     const remote = resolveRemote(is);
-    const Com = await loadScopeComponent("wis", remote);
+    const Com = await loadScopeComponent("wis", remote, exportName);
     setComponent(Com);
   }
 
