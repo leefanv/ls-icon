@@ -4,47 +4,46 @@ import { Button } from "@headlessui/react";
 import LightIcon from "../../../assets/icons/light.svg";
 import DarkIcon from "../../../assets/icons/dark.svg";
 
-import styles from "./Theme.module.scss"
+import styles from "./Theme.module.scss";
 
 function Theme() {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState("light");
 
   useEffect(() => {
-    setMode(getSystemTheme())
-  }, [])
+    setMode(getSystemTheme());
+  }, []);
 
   useEffect(() => {
     setFramesTheme(mode);
-  }, [mode])
+  }, [mode]);
 
   function getSystemTheme() {
-    if (typeof window === 'undefined') {
-      return 'light'
+    if (typeof window === "undefined") {
+      return "light";
     }
 
-    const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)')
-    
+    const mediaQueryListDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+
     if (mediaQueryListDark.matches) {
-      return 'dark'
+      return "dark";
     }
 
-    return 'light'
+    return "light";
   }
 
   function setFramesTheme(mode) {
-    setFrameTheme(window, mode)
+    setFrameTheme(window, mode);
 
     Array.prototype.forEach.call(window.frames, (frame) => {
       setFrameTheme(frame, mode);
-    }) 
+    });
   }
 
   function setFrameTheme(frame, mode) {
-    if (mode === "light") {
-      frame.document.documentElement.removeAttribute("data-theme");
-    } else {
-      frame.document.documentElement.setAttribute("data-theme", mode);
-    }
+    frame.document.documentElement.setAttribute("data-theme", mode);
+    frame.document.documentElement.style["color-scheme"] = mode;
   }
 
   function handleChange() {

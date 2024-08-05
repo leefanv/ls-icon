@@ -4,8 +4,8 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { ReactNode } from "react";
-import FolderIcon from "@/assets/icons/github.svg";
-import OpenFolderIcon from "@/assets/icons/git.svg";
+import FolderCloseIcon from "@/assets/icons/folder-close.svg";
+import FolderOpenIcon from "@/assets/icons/folder-open.svg";
 
 import styles from "./Folder.module.scss";
 
@@ -24,9 +24,9 @@ function Folder({ name, content, defaultOpen, children }: FolderProps) {
           <>
             <DisclosureButton className={styles.folder}>
               {open ? (
-                <OpenFolderIcon className={styles.icon} />
+                <FolderOpenIcon className={styles.icon} />
               ) : (
-                <FolderIcon className={styles.icon} />
+                <FolderCloseIcon className={styles.icon} />
               )}
               <span className={styles.title}>{name}</span>
               {content && <span className={styles.description} title={content}>{content}</span>}

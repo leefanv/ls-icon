@@ -38,6 +38,7 @@ export default function (agent = "pc", style = '') {
         window.$$AGENT = '${agent}';
         var theme = window.top.document.documentElement.getAttribute("data-theme") || 'light';
         document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style["color-scheme"] = theme;
       </script>
     </head>
     <body><div id="root"></div></body>

@@ -1,4 +1,4 @@
-import FileIcon from "@/assets/icons/magic.svg";
+import FileIcon from "@/assets/icons/file.svg";
 
 import styles from "./File.module.scss";
 
