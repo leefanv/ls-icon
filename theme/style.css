@@ -156,6 +156,7 @@ table {
   table-layout: fixed;
   border-spacing: 0;
   width: 100%;
+  overflow: hidden;
   border: 1px solid var(--wd-border-color-01);
   border-radius: var(--wd-border-radius-m);
 }
