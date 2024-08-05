@@ -11,26 +11,18 @@
     margin: 0;
   }
 
-//   :global {
-
-//     &.error {
-//       border: 1px solid var(--wd-callout-error-border-color);
-
-//     }
-//     &.info {
-//       border: 1px solid var(--wd-callout-info-border-color);
-
-//     }
-//     &.warning {
-//       border: 1px solid var(--wd-callout-warning-border-color);
-     
-//     }
-  
-// }
-
+  &:global {
+    &.error {
+      border: 1px solid var(--wd-callout-error-border-color);
+    }
+    &.info {
+      border: 1px solid var(--wd-callout-info-border-color);
+    }
+    &.warning {
+      border: 1px solid var(--wd-callout-warning-border-color);
+    }
+  }
 }
-
-
 
 .emoji {
   margin: 0 8px 0 0;

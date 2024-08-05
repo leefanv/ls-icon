@@ -1,14 +1,7 @@
 export default function (agent = "pc", style = '') {
-  let theme = "light";
-  if (typeof window !== "undefined") {
-    theme = document.documentElement.getAttribute("data-theme") || theme;
-  }
-
-  const themeAttr = theme !== "light" ? `data-theme="${theme}"` : "";
-
   return `
   <!DOCTYPE html>
-  <html ${themeAttr}>
+  <html>
     <head>
       <style>
         :root {
@@ -43,6 +36,8 @@ export default function (agent = "pc", style = '') {
       </style>
       <script>
         window.$$AGENT = '${agent}';
+        var theme = window.top.document.documentElement.getAttribute("data-theme") || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
       </script>
     </head>
     <body><div id="root"></div></body>

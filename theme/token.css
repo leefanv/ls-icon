@@ -18,15 +18,15 @@
   --wd-palette-gray-80: #1E293B;
   --wd-palette-gray-90: #0F172A;
   /* callout */
-  --wd-callout-warning-backgroud-color: #FFF7ED;
+  --wd-callout-warning-background-color: #FFF7ED;
   --wd-callout-warning-font-color: #7C2D12;
   --wd-callout-warning-border-color: #FED7AA;
-  --wd-callout-error-backgroud-color: #FEF2F2;
+  --wd-callout-error-background-color: #FEF2F2;
   --wd-callout-error-font-color: #7F1D1D;
   --wd-callout-error-border-color: #FECACA;
-  --callout-info-backgroud-color: #EFF6FF;
-  --callout-info-font-color: #1E3A8A;
-  --callout-info-border-color: #BFDBFE;
+  --wd-callout-info-background-color: #EFF6FF;
+  --wd-callout-info-font-color: #1E3A8A;
+  --wd-callout-info-border-color: #BFDBFE;
   
   --wd-border-color-01: var(--wd-palette-gray-20);
   --wd-border-color-inverse: var(--wd-palette-common-black);
@@ -85,15 +85,15 @@ html[data-theme='dark'] {
   --wd-palette-gray-80: rgba(255, 255, 255, 0.80);
   --wd-palette-gray-90: rgba(255, 255, 255, 0.90);
   /* callout */
-  --wd-callout-warning-backgroud-color: #7C2D12;
+  --wd-callout-warning-background-color: #7C2D12;
   --wd-callout-warning-font-color: #FDBA74;
   --wd-callout-warning-border-color: #9A3412;
-  --wd-callout-error-backgroud-color: #7F1D1D;
+  --wd-callout-error-background-color: #7F1D1D;
   --wd-callout-error-font-color: #FECACA;
   --wd-callout-error-border-color: #991B1B;
-  --callout-info-backgroud-color: #1E3A8A;
-  --callout-info-font-color: #60A5FA;
-  --callout-info-border-color: #2563EB;
+  --wd-callout-info-background-color: #1E3A8A;
+  --wd-callout-info-font-color: #60A5FA;
+  --wd-callout-info-border-color: #2563EB;
 
   --wd-border-color-01: rgba(255, 255, 255, 0.10);
   --wd-border-color-inverse: var(--wd-palette-common-white);

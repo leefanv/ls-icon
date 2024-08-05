@@ -6,10 +6,10 @@ import getFrameDefaultContent from "./frameDefaultContent";
 import styles from "./PC.module.scss";
 
 function PC({ height = 200, children }) {
-  const [visible, setVisible] = useState(false);
+  const [iframeContent, setIframeContent] = useState("");
 
   useEffect(() => {
-    setVisible(true);
+    setIframeContent(getFrameDefaultContent());
   }, []);
 
   function renderFrame(key, node) {
@@ -19,18 +19,18 @@ function PC({ height = 200, children }) {
         className={styles.iframe}
         style={{ height: `${height}px` }}
         mountTarget="#root"
-        initialContent={getFrameDefaultContent("pc")}
+        initialContent={iframeContent}
       >
         {node}
       </Iframe>
     );
   }
 
-  if (!visible) {
-    return renderFrame('frame-placeholder', <span />)
+  if (!iframeContent) {
+    return renderFrame("frame-placeholder", <span />);
   }
 
-  return renderFrame('frame', children)
+  return renderFrame("frame", children);
 }
 
 export default PC;

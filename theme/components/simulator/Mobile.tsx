@@ -7,10 +7,12 @@ import getFrameDefaultContent from "./frameDefaultContent";
 import styles from "./Mobile.module.scss";
 
 function Mobile({ children }) {
-  const [visible, setVisible] = useState(false);
+  const [iframeContent, setIframeContent] = useState("");
 
   useEffect(() => {
-    setVisible(true);
+    setIframeContent(
+      getFrameDefaultContent("mobile", "body { padding: 32px 0 0 0 }")
+    );
   }, []);
 
   function renderFrame(key, node) {
@@ -22,10 +24,7 @@ function Mobile({ children }) {
           <Iframe
             className={styles.iframe}
             mountTarget="#root"
-            initialContent={getFrameDefaultContent(
-              "mobile",
-              `body { padding: 32px 0 0 0 }`
-            )}
+            initialContent={iframeContent}
           >
             {node}
           </Iframe>
@@ -34,7 +33,8 @@ function Mobile({ children }) {
     );
   }
 
-  if (!visible) {
+
+  if (!iframeContent) {
     return renderFrame("frame-placeholder", <span />);
   }
 
