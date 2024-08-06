@@ -33,7 +33,7 @@ module.exports = withNextra({
       new ModuleFederationWebpackPlugin({
         name: "website",
         remotes: {
-          wis: `wis@http://localhost:4000/remote.js`,
+          wis: `wis@${process.env.NEXT_PUBLIC_WIS}/remote.js`,
         },
         force: true,
         filename: "remote.js",
