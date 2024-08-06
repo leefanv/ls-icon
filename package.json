@@ -6,15 +6,14 @@
     "preinstall": "npx only-allow pnpm",
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
     "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
-    "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true next start"
+    "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true next start",
+    "token": "token -n wd -l ./assets/wd.light.tokens.json -d ./assets/wd.dark.tokens.json -o ./theme/tokens"
   },
   "author": "Faure Wu <faure@wis.design>",
   "license": "MIT",
   "dependencies": {
     "@docsearch/js": "3",
     "@headlessui/react": "2.1.2",
-    "@module-federation/nextjs-mf": "8.4.5",
-    "@svgr/webpack": "8.1.0",
     "beautiful-react-hooks": "5.0.2",
     "classnames": "2.5.1",
     "esm": "3.2.25",
@@ -30,6 +29,9 @@
     "@babel/generator": "7.24.7",
     "@babel/parser": "7.24.7",
     "@babel/traverse": "7.24.7",
+    "@wisdesign/token": "0.0.2",
+    "@module-federation/nextjs-mf": "8.4.5",
+    "@svgr/webpack": "8.1.0",
     "@types/node": "18.11.10",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",

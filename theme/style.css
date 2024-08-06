@@ -1,6 +1,6 @@
-@import './token.css';
-@import './codeToken.css';
-@import './docsearchToken.css';
+@import './tokens/index.css';
+@import './tokens/codeToken.css';
+@import './tokens/docsearchToken.css';
 @import './docsearch.css';
 
 html {
