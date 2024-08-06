@@ -1,14 +1,18 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 8px 16px;
+  padding: 16px 16px;
   box-sizing: border-box;
   border: 1px solid var(--wd-border-color-01);
   border-radius: var(--wd-border-radius-m);
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-03);
+  font-size: var(--wd-font-size-base);
 
   p {
     margin: 0;
+    font-weight: normal;
+    color: var(--wd-font-color-01);
+    font-size: var(--wd-font-size-sm);
   }
 
   &:hover {
@@ -21,7 +25,7 @@
   flex-direction: row;
   align-items: center;
   font-weight: 500;
-  margin: 0 0 4px 0;
+  margin: 0 0 8px 0;
 }
 
 .content {

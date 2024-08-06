@@ -14,12 +14,18 @@
   &:global {
     &.error {
       border: 1px solid var(--wd-callout-error-border-color);
+      background-color: var(--wd-callout-error-background-color);
+      color: var(--wd-callout-error-font-color);
     }
     &.info {
       border: 1px solid var(--wd-callout-info-border-color);
+      background-color: var(--wd-callout-info-background-color);
+      color: var(--wd-callout-info-font-color);
     }
     &.warning {
       border: 1px solid var(--wd-callout-warning-border-color);
+      background-color: var(--wd-callout-warning-background-color);
+      color: var(--wd-callout-warning-font-color);
     }
   }
 }
@@ -27,4 +33,5 @@
 .emoji {
   margin: 0 8px 0 0;
   font-size: var(--wd-font-size-base);
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
