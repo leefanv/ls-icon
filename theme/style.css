@@ -5,7 +5,7 @@
 
 html {
   background: var(--wd-background-color-default);
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
   font-size: var(--wd-font-size-sm);
   overflow: auto;
   scrollbar-gutter: stable;
@@ -53,18 +53,22 @@ button {
 
 h1 {
   font-size: 36px;
+  color: var(--wd-font-color-03);
 }
 
 h2 {
   font-size: 28px;
+  color: var(--wd-font-color-03);
 }
 
 h3 {
   font-size: 20px;
+  color: var(--wd-font-color-03);
 }
 
 h4 {
   font-size: 16px;
+  color: var(--wd-font-color-03);
 }
 
 a {
@@ -92,7 +96,7 @@ li {
 }
 
 code {
-  font-family: var(--wd-font-code);
+  font-family: var(--shiki-font-family-code);
   background: var(--wd-background-color-01);
   padding: 0 4px;
   border-radius: var(--wd-border-radius-m);

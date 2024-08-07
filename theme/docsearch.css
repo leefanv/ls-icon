@@ -230,7 +230,7 @@ html:has(body.DocSearch--active) {
 
 .DocSearch-LoadingIndicator svg,
 .DocSearch-MagnifierLabel svg {
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
   height: 16px;
   width: 16px;
 }

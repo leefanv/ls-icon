@@ -26,7 +26,7 @@
 
   > a {
     text-decoration: none;
-    color: inherit;
+    color: var(--wd-font-color-03);
     font-weight: 500;
   }
   > a:hover {
@@ -62,7 +62,7 @@
 
   .icon {
     font-size: 28px;
-    color: var(--wd-font-color-inverse);
+    color: var(--wd-font-color-01);
   }
 }
 

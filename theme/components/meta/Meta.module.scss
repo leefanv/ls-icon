@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: var(--wd-font-color-03);
 }
 
 .github {
@@ -15,7 +16,7 @@
   border-radius: var(--wd-border-radius-s);
   font-size: var(--wd-font-size-xs);
   padding: 0 8px;
-  color: var(--wd-font-color-inverse);
+  color: var(--wd-font-color-01);
 }
 .github:hover {
   background-color: var(--wd-background-color-01);

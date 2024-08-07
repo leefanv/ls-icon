@@ -10,8 +10,8 @@
   --wd-background-color-transparent: #ffffffcc;
   --wd-background-color-body: var(--wd-palette-common-white);
   --wd-background-color-brand: var(--wd-palette-common-brand);
-  --wd-font-family-base: Inter;
-  --wd-font-family-code: IBM Plex Sans;
+  --wd-font-family-base: Inter,int-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --wd-font-family-code: IBM Plex Mono,int-apple-system,Roboto;
   --wd-font-color-01: var(--wd-palette-gray-70);
   --wd-font-color-02: var(--wd-palette-gray-80);
   --wd-font-color-03: var(--wd-palette-gray-90);
@@ -48,8 +48,8 @@ html[data-theme="dark"] {
   --wd-background-color-transparent: #0f172acc;
   --wd-background-color-body: #0f172a;
   --wd-background-color-brand: var(--wd-palette-common-brand);
-  --wd-font-family-base: Inter;
-  --wd-font-family-code: IBM Plex Sans;
+  --wd-font-family-base: Inter,int-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --wd-font-family-code: IBM Plex Mono,int-apple-system,Roboto;
   --wd-font-color-01: #ffffff66;
   --wd-font-color-02: #ffffffb2;
   --wd-font-color-03: var(--wd-palette-gray-90);

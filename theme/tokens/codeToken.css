@@ -10,6 +10,7 @@
   --shiki-token-string-expression: var(--shiki-token-string);
   --shiki-token-punctuation: oklch(24.78% 0 0);
   --shiki-token-link: var(--shiki-token-string);
+  --shiki-font-family-code: IBM Plex Mono,int-apple-system,Roboto;
 
   /* from github-light */
   --shiki-color-ansi-black: #24292e;
@@ -57,6 +58,7 @@ html[data-theme='dark'] {
   --shiki-token-string-expression: oklch(69.28% 0.179 143.2);
   --shiki-token-punctuation: oklch(79.21% 0 0);
   --shiki-token-link: var(--shiki-token-string);
+  --shiki-font-family-code: IBM Plex Mono,int-apple-system,Roboto;
   
   /* from github-dark */
   --shiki-color-ansi-black: #586069;
