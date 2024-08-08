@@ -12,11 +12,11 @@ interface CardProps {
 function Card({ href, title, icon, children }: CardProps) {
   return (
     <a className={styles.card} href={href}>
-      <div className={styles.header}>
-        <div className={styles.icon}>{icon}</div>
-        <div className={styles.title}>{title}</div>
+      <div className={styles.icon}>{icon}</div>
+      <div className={styles.container}>
+        <div className={styles.header}>{title}</div>
+        <div className={styles.content}>{children}</div>
       </div>
-      <div className={styles.content}>{children}</div>
     </a>
   );
 }
