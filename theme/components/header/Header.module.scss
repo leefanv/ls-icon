@@ -5,6 +5,7 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -70,4 +71,18 @@
   color: var(--wd-font-color-helper);
   margin: 0 0 0 4px;
   font-size: var(--wd-font-size-base);
+}
+
+@media (max-width: 876px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .tools {
+    display: none;
+  }
 }

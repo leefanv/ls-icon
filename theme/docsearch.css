@@ -65,7 +65,18 @@
   width: 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 876px) {
+  .DocSearch-Button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
   .DocSearch-Button-Keys,
   .DocSearch-Button-Placeholder {
     display: none;
@@ -656,7 +667,7 @@ assistive tech users */
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 876px) {
   :root {
     --docsearch-spacing: 10px;
     --docsearch-footer-height: 40px;

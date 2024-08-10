@@ -46,9 +46,11 @@
 }
 
 .status {
+  display: none;
   position: absolute;
   top: -1px;
-  left: 76px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 220px;
   height: 32px;
   background-image: url('../../../assets/images/state.svg');
@@ -68,4 +70,11 @@
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   overflow: hidden;
+}
+
+@media (max-width: 876px) {
+  .phone {
+    margin: 16px;
+    height: 520px;
+  }
 }

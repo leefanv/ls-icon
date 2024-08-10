@@ -7,14 +7,13 @@ html {
   background: var(--wd-background-color-default);
   color: var(--wd-font-color-01);
   font-size: var(--wd-font-size-sm);
-  overflow: auto;
   scrollbar-gutter: stable;
   scrollbar-width: 14px;
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  scrollbar-color: var(--wd-background-scrollbar) var(--wd-background-color-01);
+  scrollbar-color: var(--wd-background-color-scrollbar) var(--wd-background-color-01);
 }
 
 .scroll {
@@ -29,7 +28,6 @@ body {
   font-size: var(--wd-font-size-sm);
   text-align: left;
   word-break: break-word;
-
   padding: 0;
   margin: 0;
 }
@@ -120,6 +118,7 @@ code[data-line-numbers]::after {
 
 code .line {
   line-height: 20px;
+  white-space: pre-wrap;
 }
 
 code .line.highlighted>span {
@@ -216,4 +215,11 @@ a:focus-visible,
 button:focus-visible {
   outline: 1px solid var(--wd-border-color-brand);
   outline-offset: 1px;
+}
+
+@media (max-width: 876px) {
+  a:focus-visible,
+  button:focus-visible {
+    outline: none;
+  }
 }

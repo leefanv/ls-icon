@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Search from "../search/Search";
 import Language from "../language/Language";
 import Theme from "../theme/Theme";
+import MobileMenus from "../mobileMenus/MobileMenus";
 import GithubIcon from "../../../assets/icons/github.svg";
 import PlaceholderIcon from "../../../assets/icons/placeholder.svg";
 import type { ThemeConfig } from "../../type";
@@ -42,19 +43,20 @@ export default function Header({ themeConfig }: HeaderProps) {
         <div className={styles.tools}>
           <Theme />
           <Language />
+          {themeConfig.github && (
+            <>
+              <div className={styles.divide}></div>
+              <a
+                className={styles.github}
+                href={themeConfig.github}
+                target="__blank"
+              >
+                <GithubIcon className={styles.icon} />
+              </a>
+            </>
+          )}
         </div>
-        {themeConfig.github && (
-          <>
-            <div className={styles.divide}></div>
-            <a
-              className={styles.github}
-              href={themeConfig.github}
-              target="__blank"
-            >
-              <GithubIcon className={styles.icon} />
-            </a>
-          </>
-        )}
+        <MobileMenus options={themeConfig?.links} />
       </div>
     </div>
   );
