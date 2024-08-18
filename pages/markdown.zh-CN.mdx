@@ -72,12 +72,12 @@ function () {
 
 import Remote from "@/Remote";
 
-import Simulator from "@/theme/components/simulator/Simulator";
+import Simulator from "@/theme/widgets/simulator/Simulator";
 
 #### Simulator
 <Simulator height={200}>
   <Remote is="remote:wis/Button" />
-  <Simulator.Code>
+  <Simulator.Javascript>
   ```jsx showLineNumbers
   import Button from 'remote:wis/Button';
 
@@ -85,11 +85,11 @@ import Simulator from "@/theme/components/simulator/Simulator";
     return <Button />
   }
   ```
-  </Simulator.Code>
+  </Simulator.Javascript>
 </Simulator>
 
 #### FileTree
-import FileTree from "@/theme/components/fileTree/FileTree";
+import FileTree from "@/theme/widgets/fileTree/FileTree";
 
 <FileTree>
   <FileTree.Folder defaultOpen name="pages" content="This document lists the currently supported Markdown syntax and usage cases of custom components. If there is any syntax not covered, it requires development to complete.">
@@ -102,7 +102,7 @@ import FileTree from "@/theme/components/fileTree/FileTree";
 </FileTree>
 
 #### Steps
-import Steps from "@/theme/components/steps/Steps";
+import Steps from "@/theme/widgets/steps/Steps";
 
 <Steps>
 ## Step 1
@@ -135,7 +135,7 @@ Contents for step 2.
 </Steps>
 
 #### Callout
-import Callout from "@/theme/components/callout/Callout";
+import Callout from "@/theme/widgets/callout/Callout";
 
 <Callout emoji="👾">
   **Default Type** is a 1978 shoot 'em up arcade game developed by Tomohiro
@@ -170,7 +170,7 @@ import Callout from "@/theme/components/callout/Callout";
 </Callout>
 
 #### Cards
-import Cards from "@/theme/components/cards/Cards";
+import Cards from "@/theme/widgets/cards/Cards";
 import GitIcon from "@/assets/icons/git.svg";
 
 <Cards>

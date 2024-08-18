@@ -4,6 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import classNames from "classnames";
 import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import "focus-visible";
 
 import { ThemeConfig } from "./type";
 import Header from "./components/header/Header";

@@ -1,27 +1,33 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Iframe from "react-frame-component";
+import InjectStyles from "./InjectStyles";
 
 import getFrameDefaultContent from "./frameDefaultContent";
 
 import styles from "./PC.module.scss";
 
 function PC({ height = 200, children }) {
+  const frame = useRef();
   const [iframeContent, setIframeContent] = useState("");
 
   useEffect(() => {
-    setIframeContent(getFrameDefaultContent());
+    setIframeContent(getFrameDefaultContent("pc"));
   }, []);
 
   function renderFrame(key, node) {
     return (
       <Iframe
         key={key}
+        ref={frame}
         className={styles.iframe}
         style={{ height: `${height}px` }}
-        mountTarget="#root"
+        mountTarget="#pc"
         initialContent={iframeContent}
       >
-        {node}
+        <>
+          <InjectStyles />
+          {node}
+        </>
       </Iframe>
     );
   }

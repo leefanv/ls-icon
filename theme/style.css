@@ -5,7 +5,7 @@
 
 html {
   background: var(--wd-background-color-default);
-  color: var(--wd-font-color-01);
+  color: var(--wd-font-color-03);
   font-size: var(--wd-font-size-sm);
   scrollbar-gutter: stable;
   scrollbar-width: 14px;
@@ -24,7 +24,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  font-family: var(--wd-font-sans);
+  font-family: var(--wd-font-family-base);
   font-size: var(--wd-font-size-sm);
   text-align: left;
   word-break: break-word;
@@ -211,15 +211,11 @@ p {
   font-size: var(--wd-font-size-base);
 }
 
-a:focus-visible,
-button:focus-visible {
+:focus-visible {
   outline: 1px solid var(--wd-border-color-brand);
   outline-offset: 1px;
 }
 
-@media (max-width: 876px) {
-  a:focus-visible,
-  button:focus-visible {
-    outline: none;
-  }
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
 }

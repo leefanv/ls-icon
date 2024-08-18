@@ -3,6 +3,15 @@ export default {
   scrollTop: "Scroll to top",
   homepage: "Home",
   menus: "Menu",
+  outline: "Outline",
+  filled: "Solid",
+  icon: 'icons',
+  copyName: "Copy Name",
+  copyUse: "Copy Tag",
+  coped: "Coped",
+  searchPlaceholder: "Search",
+  sizeControl: "Size Control",
+  colorControl: "Color Control",
 
   docSearch: {
     placeholder: 'Search docs',

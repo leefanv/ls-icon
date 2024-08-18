@@ -1,0 +1,33 @@
+.tabs {
+  position: relative;
+}
+
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: var(--wd-border-radius-s);
+
+  &:hover {
+    background: var(--wd-background-color-01);
+  }
+
+  &[data-selected] {
+    background: var(--wd-background-color-01);
+  }
+}
+
+.tab-panels {
+  margin: 16px 0 0 0;
+}

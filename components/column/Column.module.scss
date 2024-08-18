@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  margin: 16px;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid var(--wd-border-color-01);
+    z-index: -1;
+  }
+}
+
+.title {
+  background: var(--wd-background-color-default);
+  padding: 0 8px 0 0;
+}
+
+.description {
+  background: var(--wd-background-color-default);
+  font-size: var(--wd-font-size-xs);
+  color: var(--wd-font-color-helper);
+  padding: 0 8px 0 0;
+}
+
+.content {
+  margin: 16px;
+}

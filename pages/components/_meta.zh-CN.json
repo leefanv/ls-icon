@@ -1,0 +1,14 @@
+{
+  "icon": {
+    "title": "Icon",
+    "group": "基础组件",
+    "order": 101,
+    "github": "https://github.com/wisdesignsystem/cli/tree/main/packages/icons",
+    "showMeta": true
+  },
+  "button": {
+    "title": "Button",
+    "group": "基础组件",
+    "order": 102
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Iframe from "react-frame-component";
 import Status from "@/assets/images/state.svg";
+import InjectStyles from "./InjectStyles";
 
 import getFrameDefaultContent from "./frameDefaultContent";
 
@@ -11,7 +12,15 @@ function Mobile({ children }) {
 
   useEffect(() => {
     setIframeContent(
-      getFrameDefaultContent("mobile", "body { padding: 32px 0 0 0 }")
+      getFrameDefaultContent(
+        "mobile",
+        "mobile",
+        `
+        #mobile {
+          padding: 32px 0 0 0;
+        }  
+      `
+      )
     );
   }, []);
 
@@ -23,16 +32,18 @@ function Mobile({ children }) {
           <Status className={styles.status} />
           <Iframe
             className={styles.iframe}
-            mountTarget="#root"
+            mountTarget="#mobile"
             initialContent={iframeContent}
           >
-            {node}
+            <>
+              <InjectStyles />
+              {node}
+            </>
           </Iframe>
         </div>
       </div>
     );
   }
-
 
   if (!iframeContent) {
     return renderFrame("frame-placeholder", <span />);

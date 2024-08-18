@@ -1,4 +1,5 @@
 .simulator {
+  position: relative;
   margin: 12px 0;
   border: 1px solid var(--wd-border-color-01);
   border-radius: var(--wd-border-radius-m);
@@ -9,10 +10,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   height: 40px;
   border-bottom: 1px solid var(--wd-border-color-01);
   padding: 0 16px;
+  gap: 0 8px;
 }
 
 .content {
@@ -36,11 +37,9 @@
   border-radius: var(--wd-border-radius-s);
   font-size: var(--wd-font-size-xs);
 
+  &.active,
+  &[data-selected],
   &:hover {
-    background: var(--wd-background-color-01);
-  }
-
-  &.active {
     background: var(--wd-background-color-01);
   }
 }
@@ -55,5 +54,36 @@
     border: none;
     border-top: 1px solid var(--wd-border-color-01);
     border-radius: 0;
+  }
+}
+
+.actions {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.tab-list {
+  background: var(--wd-background-color-01);
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid var(--wd-border-color-01);
+  padding: 0 16px;
+  gap: 0 8px;
+}
+
+.tab {
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: var(--wd-border-radius-s);
+  padding: 0 8px;
+
+  &[data-selected],
+  &:hover {
+    background: var(--wd-background-color-02);
   }
 }

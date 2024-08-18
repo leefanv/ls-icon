@@ -3,6 +3,15 @@ export default {
   scrollTop: "滚动到顶部",
   homepage: "首页",
   menus: "菜单",
+  outline: "轮廓",
+  filled: "实心",
+  icon: '图标',
+  copyName: "复制名称",
+  copyUse: "复制标签",
+  coped: "已复制",
+  searchPlaceholder: "搜索",
+  sizeControl: "尺寸控制",
+  colorControl: "颜色控制",
 
   docSearch: {
     placeholder: '搜索文档',

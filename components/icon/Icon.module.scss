@@ -1,0 +1,77 @@
+.icon {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: var(--wd-border-radius-m);
+  border: 1px solid var(--wd-border-color-01);
+  overflow: hidden;
+
+  &:hover {
+    .overlay {
+      display: flex;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: var(--wd-font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 4px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: var(--wd-background-color-default);
+}
+
+.coped {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  background: var(--wd-background-color-default);
+  color: var(--wd-font-color-brand);
+}
+
+.title {
+  font-size: var(--wd-font-size-sm);
+  padding: 0 8px;
+  margin: 16px 0 0 0;
+  white-space: nowrap;
+}
+
+.copy-name,
+.copy-use {
+  width: 100%;
+  height: 50%;
+  background: var(--wd-background-color-01);
+  border-radius: 4px;
+  text-align: center;
+}

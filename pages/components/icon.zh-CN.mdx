@@ -1,0 +1,80 @@
+语义化的矢量图标库，涵盖400多个精心制作的开源且高质量图标，同时我们还提供了icon独立站点 [LsIcon](https://lsicon.com) 实现高度定制化需求，你可以访问站点获取对应图标资源及图标设计资源用于你的项目中。
+
+## 安装
+图标组件库通过 **npm** 独立提供，需要使用图标库组件需要单独安装 [@wisdesign/icons](https://www.npmjs.com/package/@wisdesign/icons) 
+
+import Tabs from '@/theme/widgets/tabs/Tabs'
+
+<Tabs>
+  <Tabs.Panel title="npm">
+```bash
+$ npm install @wisdesign/icons --save
+```
+  </Tabs.Panel>
+  <Tabs.Panel title="yarn">
+```bash
+$ yarn add @wisdesign/icons
+```
+  </Tabs.Panel>
+  <Tabs.Panel title="pnpm">
+```bash
+$ pnpm install @wisdesign/icons --save
+```
+  </Tabs.Panel>
+</Tabs>
+
+## 基本使用
+```jsx
+import { LeftIcon } from '@wisdesign/icons'
+
+function () {
+  return <LeftIcon />
+}
+```
+
+## 样式风格
+import Simulator from "@/theme/widgets/simulator/Simulator";
+import StyleDemo from "@/examples/icon/style/StyleDemo";
+
+<Simulator height={200}>
+  <StyleDemo />
+  <Simulator.Javascript>
+  ```jsx showLineNumbers
+  import { ContractIcon } from "@wisdesign/icons";
+
+  function () {
+    return (
+      <>
+        <ContractIcon className={styles.one} />
+        <ContractIcon className={styles.two} />
+        <ContractIcon className={styles.three} />
+      </>
+    )
+  }
+  ```
+  </Simulator.Javascript>
+  <Simulator.Style>
+  ```css showLineNumbers
+  .one {
+    font-size: 20px;
+    color: red;
+  }
+
+  .two {
+    font-size: 24px;
+    color: blue;
+  }
+
+  .three {
+    font-size: 28px;
+    color: green;
+  }
+  ```
+  </Simulator.Style>
+</Simulator>
+
+## 图标列表
+
+import Icons from '@/modules/icons/Icons'
+
+<Icons />
