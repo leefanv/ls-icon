@@ -1,5 +1,6 @@
 .tabs {
   position: relative;
+  width: 100%;
 }
 
 .tab-list {
@@ -7,6 +8,10 @@
   flex-direction: row;
   align-items: center;
   gap: 0 10px;
+  padding: 32px 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .tab {
@@ -15,19 +20,26 @@
   align-items: center;
   justify-content: center;
   height: 32px;
-  padding: 0 12px;
-  cursor: pointer;
-  border-radius: var(--wd-border-radius-s);
+  padding: 0 16px;
+  text-decoration: none;
+  color: var(--ls-font-color-02);
+  border-radius: 16px;
 
   &:hover {
-    background: var(--wd-background-color-01);
+    background: var(--ls-background-color-black-transparent);
   }
 
   &[data-selected] {
-    background: var(--wd-background-color-01);
+    background: var(--ls-background-color-black-transparent);
   }
 }
 
 .tab-panels {
   margin: 16px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .tab-list {
+    padding: 64px 0 16px;
+  }
 }

@@ -17,6 +17,12 @@ function Theme() {
     setFramesTheme(mode);
   }, [mode]);
 
+  function setThemeMode(value) {
+    setMode(value);
+    const themeEvent = new CustomEvent("theme", { detail: value });
+    window.dispatchEvent(themeEvent);
+  }
+
   function getSystemTheme() {
     if (typeof window === "undefined") {
       return "light";
@@ -35,10 +41,6 @@ function Theme() {
 
   function setFramesTheme(mode) {
     setFrameTheme(window, mode);
-
-    Array.prototype.forEach.call(window.frames, (frame) => {
-      setFrameTheme(frame, mode);
-    });
   }
 
   function setFrameTheme(frame, mode) {
@@ -48,7 +50,7 @@ function Theme() {
 
   function handleChange() {
     const nextMode = mode === "light" ? "dark" : "light";
-    setMode(nextMode);
+    setThemeMode(nextMode);
   }
 
   return (

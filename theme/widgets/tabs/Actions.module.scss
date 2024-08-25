@@ -1,5 +1,15 @@
 .actions {
   position: absolute;
-  top: 0;
+  top: 32px;
   right: 0;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .actions {
+    left: 0;
+    right: unset;
+    top: 16px;
+    width: 100%;
+  }
 }

@@ -10,14 +10,13 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid var(--wd-border-color-01);
+  border: none;
 
   &:hover {
-    background: var(--wd-background-color-01);
+    background: var(--ls-background-color-black-transparent);
   }
 }
 
 .icon {
   font-size: 16px;
-  color: var(--wd-font-color-01);
 }

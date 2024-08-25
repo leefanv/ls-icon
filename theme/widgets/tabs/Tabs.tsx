@@ -22,10 +22,10 @@ function Tabs({ children }) {
               </Tab>
             );
           })}
+          {actions}
         </TabList>
         <TabPanels className={styles['tab-panels']}>{panels}</TabPanels>
       </TabGroup>
-      {actions}
     </div>
   );
 }

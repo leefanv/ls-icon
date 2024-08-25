@@ -1,5 +1,3 @@
-const ModuleFederationWebpackPlugin = require("@module-federation/nextjs-mf");
-
 const withNextra = require("nextra")({
   theme: "./theme/Theme.tsx",
   themeConfig: "./theme.config.tsx",
@@ -23,23 +21,12 @@ module.exports = withNextra({
             replaceAttrValues: {
               "#000": "currentColor",
               "#000000": "currentColor",
+              "black": "currentColor",
             },
           },
         },
       ],
     });
-
-    config.plugins.push(
-      new ModuleFederationWebpackPlugin({
-        name: "website",
-        remotes: {
-          wis: `wis@${process.env.NEXT_PUBLIC_WIS}/remote.js`,
-        },
-        force: true,
-        filename: "remote.js",
-        exposes: {},
-      })
-    );
     return config;
   },
 });

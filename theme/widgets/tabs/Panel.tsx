@@ -7,7 +7,7 @@ interface PanelProps {
 }
 
 function Panel({ children }: PanelProps) {
-  return <TabPanel>{children}</TabPanel>
+  return <TabPanel unmount={false}>{children}</TabPanel>
 }
 
 Panel.$$type = 'Panel';

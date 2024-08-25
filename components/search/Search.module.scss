@@ -3,23 +3,31 @@
   flex-direction: row;
   align-items: center;
   height: 32px;
-  background: var(--wd-background-color-default);
-  border: 1px solid var(--wd-border-color-01);
-  border-radius: var(--wd-border-radius-m);
-  color: var(--wd-font-color-helper);
+  background: var(--ls-background-color-default);
+  color: var(--ls-font-color-helper);
   cursor: pointer;
   font-weight: 400;
   padding: 8px 4px 8px 8px;
   user-select: none;
   box-sizing: border-box;
+  border-radius: var(--ls-border-radius-m);
+  border: 1px solid var(--ls-border-color-01);
+  background: var(--ls-background-color-body);
+  width: 300px;
 }
 
 .icon {
-  font-size: var(--wd-font-size-base);
+  font-size: var(--ls-font-size-base);
 }
 
 .input {
   border: none;
   outline: none;
   background: transparent;
+}
+
+@media (max-width: 992px) {
+  .search {
+    width: 100%;
+  }
 }
