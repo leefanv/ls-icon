@@ -28,6 +28,18 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 8px;
+}
+
+.reset {
+  font-size: var(--ls-font-size-sm);
+  color: var(--ls-font-color-01);
+  font-weight: 400;
+
+  &:hover {
+  font-weight: 400;
+  }
+
 }
 
 .title {
@@ -44,9 +56,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 24px 0;
+  color: var(--ls-font-color-03);
+  font-weight: 500;
 
   > label {
     margin: 0 0 16px;
+    color: var(--ls-font-color-01);
+    font-weight: 400;
   }
 }
 
@@ -57,9 +73,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 0 24px 0;
+  color: var(--ls-font-color-03);
+  font-weight: 500;
 
   > label {
-    margin: 0 0 16px;
+ 
+    color: var(--ls-font-color-01);
+    font-weight: 400;
   }
 }
 

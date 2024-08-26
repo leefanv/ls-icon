@@ -115,7 +115,7 @@ export default function Theme({ children }) {
           </p>
           <p>
             © {new Date().getFullYear()} by the makers of{" "}
-            <strong className={styles.strong}>wis.design</strong>
+            <strong className={styles.strong}><a target="_blank" href="https://wis.design">wis.design</a></strong>
           </p>
         </div>
       </footer>

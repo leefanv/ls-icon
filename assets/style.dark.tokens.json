@@ -5,6 +5,10 @@
         "$type": "color",
         "$value": "{palette.core.black}"
       },
+      "tab": {
+        "$type": "color",
+        "$value": "#ffffff33"
+      },
       "brand-transparent-03": {
         "$type": "color",
         "$value": "#fe51244d"
@@ -32,6 +36,10 @@
       "black-transparent": {
         "$type": "color",
         "$value": "#ffffff1a"
+      },
+      "dot": {
+        "$type": "color",
+        "$value": "#ffffff0d"
       }
     }
   },
@@ -49,9 +57,37 @@
         "$type": "color",
         "$value": "#ffffff"
       }
+    },
+    "size": {
+      "base": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "14px"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "12px"
+      }
     }
   },
   "border": {
+    "radius": {
+      "s": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "m": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "l": {
+        "$type": "dimension",
+        "$value": "16px"
+      }
+    },
     "color": {
       "01": {
         "$type": "color",

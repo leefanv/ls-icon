@@ -6,7 +6,7 @@
   border-bottom: 1px solid var(--ls-border-color-01);
   background: var(--ls-background-color-transparent);
   backdrop-filter: blur(5px);
-  height: 82px;
+  height: 64px;
   width: 100%;
   position: sticky;
   top: 0;
@@ -70,6 +70,7 @@
   text-decoration: none;
   color: var(--ls-font-color-02);
   border-radius: 16px;
+  font-size: var(--ls-font-size-sm);
 
   &:hover {
     background: var(--ls-background-color-black-transparent);
@@ -102,7 +103,10 @@
   content: '';
   background-image: url('../assets/images/dot.svg');
   background-repeat: repeat;
-  background-size: 24px 24px;
+  background-size: 20px 20px;
+}
+.strong {
+  color: var(--ls-font-color-03);
 }
 
 .tags {
@@ -113,7 +117,7 @@
 
 .tag {
   color: var(--ls-palette-core-brand);
-  font-size: 16px;
+  font-size: var(--ls-font-size-sm);
   font-weight: 600;
 }
 
@@ -132,8 +136,16 @@
 
 .description {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 28px 0;
+  color: var(--ls-font-color-01);
+  width: 680px;
+}
+
+.marker {
+ font-size: var(--ls-font-size-base);
+ color: var(--ls-font-color-01);
+
 }
 
 .left {
@@ -190,6 +202,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  p {
+    color: var(--ls-font-color-01);
+    font-size: var(--ls-font-size-sm);
   }
 }
 

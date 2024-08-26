@@ -1,7 +1,7 @@
 .trigger {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--ls-border-radius-m);
+  border: 2px solid var(--ls-background-color-transparent);
   background: var(--ls-background-color-body);
 }

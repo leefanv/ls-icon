@@ -24,13 +24,18 @@
   text-decoration: none;
   color: var(--ls-font-color-02);
   border-radius: 16px;
+  font-size: var(--ls-font-size-sm);
+  font-weight: 400;
 
   &:hover {
     background: var(--ls-background-color-black-transparent);
+    font-weight: 400;
   }
 
   &[data-selected] {
     background: var(--ls-background-color-black-transparent);
+    font-weight: 500;
+    color: var(--ls-font-color-03);
   }
 }
 

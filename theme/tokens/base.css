@@ -1,5 +1,6 @@
 :root {
   --ls-background-color-body: var(--ls-palette-core-white);
+  --ls-background-color-tab: var(--ls-palette-core-white);
   --ls-background-color-brand-transparent-03: #fe51244d;
   --ls-background-color-brand-transparent-01: #fe51241a;
   --ls-background-color-gray-01: var(--ls-palette-gray-01);
@@ -7,13 +8,21 @@
   --ls-background-color-gray-transparent: #fcfcfc00;
   --ls-background-color-transparent: #ffffffe5;
   --ls-background-color-black-transparent: #0000000d;
+  --ls-background-color-dot: #f0f0f0;
   --ls-font-color-01: #737373;
   --ls-font-color-02: #525252;
   --ls-font-color-03: #171717;
+  --ls-font-size-base: 16px;
+  --ls-font-size-sm: 14px;
+  --ls-font-size-xs: 12px;
+  --ls-border-radius-s: 4px;
+  --ls-border-radius-m: 8px;
+  --ls-border-radius-l: 16px;
   --ls-border-color-01: var(--ls-palette-gray-01);
 }
 html[data-theme="dark"] {
   --ls-background-color-body: var(--ls-palette-core-black);
+  --ls-background-color-tab: #ffffff33;
   --ls-background-color-brand-transparent-03: #fe51244d;
   --ls-background-color-brand-transparent-01: #fe51241a;
   --ls-background-color-gray-01: #ffffff1a;
@@ -21,8 +30,15 @@ html[data-theme="dark"] {
   --ls-background-color-gray-transparent: #ffffff00;
   --ls-background-color-transparent: #07080acc;
   --ls-background-color-black-transparent: #ffffff1a;
+  --ls-background-color-dot: #ffffff0d;
   --ls-font-color-01: #ffffff80;
   --ls-font-color-02: #ffffffb2;
   --ls-font-color-03: #ffffff;
+  --ls-font-size-base: 16px;
+  --ls-font-size-sm: 14px;
+  --ls-font-size-xs: 12px;
+  --ls-border-radius-s: 4px;
+  --ls-border-radius-m: 8px;
+  --ls-border-radius-l: 16px;
   --ls-border-color-01: var(--ls-palette-gray-01);
 }
