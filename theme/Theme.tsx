@@ -6,6 +6,8 @@ import Logo from "@/components/logo/Logo";
 import { useTranslations } from "next-intl";
 import ThemeTool from "@/theme/components/theme/Theme";
 import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import lottieData from "../assets/line-mg-Final.json";
 
 import styles from "./Theme.module.scss";
 
@@ -26,7 +28,9 @@ export default function Theme({ children }) {
 
   return (
     <div className={styles.layout}>
-      <header className={classNames(styles.header, { [styles.collapse]: collapse })}>
+      <header
+        className={classNames(styles.header, { [styles.collapse]: collapse })}
+      >
         <div className={styles.container}>
           <Logo />
           <div className={styles.tools}>
@@ -61,7 +65,14 @@ export default function Theme({ children }) {
             <p className={styles.description}>{t("description")}</p>
             <div className={styles.marker}>{t("marker")}</div>
           </div>
-          <svg className={styles.chart} viewBox="-4 -4 328 328">
+          <DotLottieReact
+            className={styles.chart}
+            data={lottieData}
+            backgroundColor="transparent"
+            loop
+            autoplay
+          ></DotLottieReact>
+          {/* <svg className={styles.chart} viewBox="-4 -4 328 328">
             <rect
               className={styles.helper}
               width={280}
@@ -96,7 +107,7 @@ export default function Theme({ children }) {
               r={160}
             ></circle>
             <path className={styles.path}></path>
-          </svg>
+          </svg> */}
         </div>
       </div>
       <main ref={mainEl} className={styles.main}>
@@ -115,7 +126,11 @@ export default function Theme({ children }) {
           </p>
           <p>
             © {new Date().getFullYear()} by the makers of{" "}
-            <strong className={styles.strong}><a target="_blank" href="https://wis.design">wis.design</a></strong>
+            <strong className={styles.strong}>
+              <a target="_blank" href="https://wis.design">
+                wis.design
+              </a>
+            </strong>
           </p>
         </div>
       </footer>

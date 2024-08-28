@@ -64,10 +64,13 @@ function Icons() {
                   return (
                     <div key={category.title} className={styles.category}>
                       <div className={styles.header}>
-                        <span className={styles.title}>{category.title}</span>
-                        <span className={styles.helper}>
-                          {category.children.length} {t("icon")}
-                        </span>
+                        <div className={styles.left}>
+                          <span className={styles.title}>{category.title}</span>
+                          <span className={styles.helper}>
+                            {category.children.length} {t("icon")}
+                          </span>
+                        </div>
+                        <div className={styles.right} />
                       </div>
                       <div className={styles.content}>
                         {category.children.map((icon) => {
