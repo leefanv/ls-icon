@@ -9,7 +9,7 @@ import styles from "./Setting.module.scss";
 
 function Setting() {
   const defaultSize = 24;
-  const defaultStrokeWeight = 0.5;
+  const defaultStrokeWeight = 1;
 
   const t = useTranslations();
   const [size, setSize] = useState(defaultSize);
@@ -115,15 +115,19 @@ function Setting() {
       <div className={styles.content}>
         <div className={styles.item}>
           <label>{t("size")}</label>
-          <Slider value={size} min={12} max={48} onInput={handleSizeChange} />
+          <Slider 
+            value={size} 
+            min={12} 
+            max={48} 
+            onInput={handleSizeChange} />
         </div>
         <div className={styles.item}>
           <label>{t("strokeWeight")}</label>
           <Slider
             value={strokeWeight}
-            step={0.1}
-            min={0.1}
-            max={1}
+            step={0.5}
+            min={0.5}
+            max={2}
             onInput={handleStrokeWeightChange}
           />
         </div>

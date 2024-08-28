@@ -21,8 +21,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(@types/react-dom@18.2.0)(@types/react@18.2.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@wisdesign/icons':
-        specifier: 0.0.6
-        version: 0.0.6(react@18.2.0)
+        specifier: 0.0.11
+        version: 0.0.11(react@18.2.0)
       beautiful-react-hooks:
         specifier: 5.0.2
         version: 5.0.2(react-dom@18.2.0(react@18.2.0))(react-router-dom@6.26.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)(rxjs@7.8.1)
@@ -1496,8 +1496,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@wisdesign/icons@0.0.6':
-    resolution: {integrity: sha512-ppsBIy3Qtj2Ek9DXB+DmsehM+15m20bRX3MUKVfCs/wSjdDiETFBTfzbqOu1Dk1i1x5IvM69khhbcOrebydJ8g==}
+  '@wisdesign/icons@0.0.11':
+    resolution: {integrity: sha512-Ry5/DZsyiydrF75D1Ih5G8IoMO7tUHKopnwDZa0CBRW7+lO5YmRBNoT0Rnh9QHHjpk02xH2ci+QAI7ijJ2lwOg==}
     peerDependencies:
       react: '>=16'
 
@@ -4755,7 +4755,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@wisdesign/icons@0.0.6(react@18.2.0)':
+  '@wisdesign/icons@0.0.11(react@18.2.0)':
     dependencies:
       react: 18.2.0
 

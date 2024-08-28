@@ -16,7 +16,7 @@
     "@radix-ui/react-popover": "1.1.1",
     "@radix-ui/react-slider": "1.2.0",
     "@radix-ui/react-toggle-group": "1.1.0",
-    "@wisdesign/icons": "0.0.6",
+    "@wisdesign/icons": "0.0.11",
     "beautiful-react-hooks": "5.0.2",
     "classnames": "2.5.1",
     "clipboard": "2.0.11",
