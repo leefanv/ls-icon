@@ -60,6 +60,29 @@
   gap: 0 16px;
 }
 
+.cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  text-decoration: none;
+  color: var(--ls-font-color-02);
+  font-size: var(--ls-font-size-sm);
+  background: var(--ls-);
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: linear-gradient(315deg, #000 0%, #171717 100%);
+  box-shadow: 0px 0.5px 0px 0px rgba(255, 255, 255, 0.32) inset;
+
+  &:hover {
+    background: linear-gradient(315deg, #2a2a2a 0%, #171717 100%);
+  }
+
+}
+
 .tool {
   display: flex;
   flex-direction: row;

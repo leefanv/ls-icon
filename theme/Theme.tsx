@@ -37,7 +37,7 @@ export default function Theme({ children }) {
               {t("document")}
             </Link>
             <Link
-              className={classNames(styles.tool, styles.figma)}
+              className={classNames(styles.cta, styles.figma)}
               href="https://www.figma.com/design/YHxoWAu8TE5ZOOebA2MHtN/wis-icon?node-id=666-3&t=73vKfDXG2Zy9Te2J-0"
             >
               {t("getFigma")}
