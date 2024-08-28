@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Tabs from "@/theme/widgets/tabs/Tabs";
 import Icon from "@/components/icon/Icon";
 import Search from "@/components/search/Search";
@@ -12,20 +12,15 @@ import Setting from "./Setting";
 
 import styles from "./Icons.module.scss";
 
+React.useLayoutEffect = React.useEffect
+
 function Icons() {
   const clipboard = useRef(null);
   const [searchText, setSearchText] = useState("");
+  const [showIcons, setShowIcons] = useState(icons);
   const t = useTranslations();
 
-  const handleSearch = useDebouncedCallback((value = "") => {
-    setSearchText(value.trim());
-  });
-
-  function handleCopy(data) {
-    clipboard.current.copy(data);
-  }
-
-  const showIcons = useMemo(() => {
+  function getShowIcons() {
     if (!searchText) {
       return icons;
     }
@@ -47,7 +42,19 @@ function Icons() {
           .filter((category) => category.children.length > 0),
       };
     });
-  }, [searchText]);
+  }
+
+  useEffect(() => {
+    setShowIcons(getShowIcons());
+  }, [searchText])
+
+  const handleSearch = useDebouncedCallback((value = "") => {
+    setSearchText(value.trim());
+  });
+
+  function handleCopy(data) {
+    clipboard.current.copy(data);
+  }
 
   return (
     <div className={styles.icons}>

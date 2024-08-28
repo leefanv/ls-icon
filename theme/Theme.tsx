@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import ThemeTool from "@/theme/components/theme/Theme";
 import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import lottieData from "../assets/line-mg-Final.json";
+import lottieData from "@/assets/line-mg-Final.json";
 
 import styles from "./Theme.module.scss";
 
@@ -65,49 +65,49 @@ export default function Theme({ children }) {
             <p className={styles.description}>{t("description")}</p>
             <div className={styles.marker}>{t("marker")}</div>
           </div>
-          <DotLottieReact
-            className={styles.chart}
-            data={lottieData}
-            backgroundColor="transparent"
-            loop
-            autoplay
-          ></DotLottieReact>
-          {/* <svg className={styles.chart} viewBox="-4 -4 328 328">
-            <rect
-              className={styles.helper}
-              width={280}
-              height={280}
-              x={20}
-              y={20}
-              rx={10}
-              ry={10}
-            ></rect>
-            <rect
-              className={styles.helper}
-              width={320}
-              height={240}
-              x={0}
-              y={40}
-              rx={10}
-              ry={10}
-            ></rect>
-            <rect
-              className={styles.helper}
-              width={240}
-              height={320}
-              x={40}
-              y={0}
-              rx={10}
-              ry={10}
-            ></rect>
-            <circle
-              className={styles.helper}
-              cx={160}
-              cy={160}
-              r={160}
-            ></circle>
-            <path className={styles.path}></path>
-          </svg> */}
+          <div className={styles.chart}>
+            <DotLottieReact
+              data={lottieData}
+              backgroundColor="transparent"
+              loop
+              autoplay
+            ></DotLottieReact>
+            <svg className={styles.background} viewBox="0 0 320 320">
+              <rect
+                className={styles.helper}
+                width={240}
+                height={240}
+                x={40}
+                y={40}
+                rx={10}
+                ry={10}
+              ></rect>
+              <rect
+                className={styles.helper}
+                width={280}
+                height={200}
+                x={20}
+                y={60}
+                rx={10}
+                ry={10}
+              ></rect>
+              <rect
+                className={styles.helper}
+                width={200}
+                height={280}
+                x={60}
+                y={20}
+                rx={10}
+                ry={10}
+              ></rect>
+              <circle
+                className={styles.helper}
+                cx={160}
+                cy={160}
+                r={140}
+              ></circle>
+            </svg>
+          </div>
         </div>
       </div>
       <main ref={mainEl} className={styles.main}>
