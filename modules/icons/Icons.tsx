@@ -5,6 +5,7 @@ import Search from "@/components/search/Search";
 import * as IconComponents from "@wisdesign/icons";
 import icons from "@wisdesign/icons/components/meta";
 import useDebouncedCallback from "beautiful-react-hooks/useDebouncedCallback";
+import useUpdateEffect from 'beautiful-react-hooks/useUpdateEffect'
 import { useTranslations } from "next-intl";
 import Clipboard from "@/components/clipboard/Clipboard";
 
@@ -16,6 +17,7 @@ React.useLayoutEffect = React.useEffect
 
 function Icons() {
   const clipboard = useRef(null);
+  const setting = useRef(null);
   const [searchText, setSearchText] = useState("");
   const [showIcons, setShowIcons] = useState(icons);
   const t = useTranslations();
@@ -43,6 +45,10 @@ function Icons() {
       };
     });
   }
+
+  useUpdateEffect(() => {
+    setting.current.set();
+  }, [showIcons])
 
   useEffect(() => {
     setShowIcons(getShowIcons());
@@ -107,7 +113,7 @@ function Icons() {
           })}
         </Tabs>
       </div>
-      <Setting />
+      <Setting ref={setting} />
     </div>
   );
 }

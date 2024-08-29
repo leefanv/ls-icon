@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@headlessui/react";
 import {
@@ -16,7 +16,7 @@ import Group from "@/components/group/Group";
 
 import styles from "./Setting.module.scss";
 
-function Setting() {
+function Setting(props, ref) {
   const defaultSize = 24;
   const defaultStrokeWeight = 1;
   const defaultLinecap = 'butt';
@@ -28,6 +28,18 @@ function Setting() {
   const [linecap, setLinecap] = useState(defaultLinecap);
   const [linejoin, setLinejoin] = useState(defaultLinejoin);
   const [color, setColor] = useState("#000000");
+
+  useImperativeHandle(ref, () => {
+    return {
+      set: () => {
+        setIconSize(size);
+        setIconStrokeWeight(strokeWeight);
+        setIconColor(color);
+        setIconLinecap(linecap);
+        setIconLinejoin(linejoin);
+      },
+    }
+  })
 
   // @ts-ignore
   const onThemeChange = useGlobalEvent("theme");
@@ -142,11 +154,14 @@ function Setting() {
     setIconSize(defaultSize);
     setIconStrokeWeight(defaultStrokeWeight);
     setIconColor(getThemeColor());
+    setIconLinecap(defaultLinecap);
+    setIconLinejoin(defaultLinejoin);
+
     setSize(defaultSize);
     setStrokeWeight(defaultStrokeWeight);
     setColor(getThemeColor());
-    setIconLinecap(defaultLinecap);
-    setIconLinejoin(defaultLinejoin);
+    setLinecap(defaultLinecap);
+    setLinejoin(defaultLinejoin);
   }
 
   return (
@@ -219,4 +234,4 @@ function Setting() {
   );
 }
 
-export default Setting;
+export default forwardRef(Setting);
