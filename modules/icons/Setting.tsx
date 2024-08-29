@@ -117,7 +117,7 @@ function Setting() {
           <label>{t("size")}</label>
           <Slider 
             value={size} 
-            min={12} 
+            min={16} 
             max={48} 
             onInput={handleSizeChange} />
         </div>
@@ -125,7 +125,7 @@ function Setting() {
           <label>{t("strokeWeight")}</label>
           <Slider
             value={strokeWeight}
-            step={0.5}
+            step={0.1}
             min={0.5}
             max={2}
             onInput={handleStrokeWeightChange}

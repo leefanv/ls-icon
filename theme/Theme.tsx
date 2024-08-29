@@ -93,6 +93,29 @@ export default function Theme({ children }) {
               ></rect>
               <rect
                 className={styles.helper}
+                width={160}
+                height={160}
+                x={80}
+                y={80}
+                rx={10}
+                ry={10}
+              ></rect>
+              <line
+                className={styles.helper}
+                x1="20"
+                y1="160"
+                x2="300"
+                y2="160"
+              ></line>
+              <line
+                className={styles.helper}
+                x1="160"
+                y1="20"
+                x2="160"
+                y2="300"
+              ></line>
+              <rect
+                className={styles.helper}
                 width={200}
                 height={280}
                 x={60}
