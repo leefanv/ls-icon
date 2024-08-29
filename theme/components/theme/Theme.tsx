@@ -10,7 +10,20 @@ function Theme() {
   const [mode, setMode] = useState("light");
 
   useEffect(() => {
-    setMode(getSystemTheme());
+    const initialTheme = getSystemTheme();
+    setMode(initialTheme);
+
+    // Add event listener for system theme changes
+    const mediaQueryListDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleSystemThemeChange = (e) => {
+      setMode(e.matches ? "dark" : "light");
+    };
+
+    mediaQueryListDark.addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      mediaQueryListDark.removeEventListener("change", handleSystemThemeChange);
+    };
   }, []);
 
   useEffect(() => {
@@ -28,15 +41,8 @@ function Theme() {
       return "light";
     }
 
-    const mediaQueryListDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
-
-    if (mediaQueryListDark.matches) {
-      return "dark";
-    }
-
-    return "light";
+    const mediaQueryListDark = window.matchMedia("(prefers-color-scheme: dark)");
+    return mediaQueryListDark.matches ? "dark" : "light";
   }
 
   function setFramesTheme(mode) {
