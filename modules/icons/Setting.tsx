@@ -1,19 +1,32 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@headlessui/react";
+import {
+  LinecapButtIcon,
+  LinecapSquareIcon,
+  LinecapRoundIcon,
+  LinejoinMiterIcon,
+  LinejoinBevelIcon,
+  LinejoinRoundIcon,
+} from "@wisdesign/icons";
 import Slider from "@/components/slider/Slider";
 import ColorPicker from "@/components/colorPicker/ColorPicker";
 import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import Group from "@/components/group/Group";
 
 import styles from "./Setting.module.scss";
 
 function Setting() {
   const defaultSize = 24;
   const defaultStrokeWeight = 1;
+  const defaultLinecap = 'butt';
+  const defaultLinejoin = 'miter';
 
   const t = useTranslations();
   const [size, setSize] = useState(defaultSize);
   const [strokeWeight, setStrokeWeight] = useState(defaultStrokeWeight);
+  const [linecap, setLinecap] = useState(defaultLinecap);
+  const [linejoin, setLinejoin] = useState(defaultLinejoin);
   const [color, setColor] = useState("#000000");
 
   // @ts-ignore
@@ -64,6 +77,24 @@ function Setting() {
     );
   }
 
+  function setIconLinecap(value) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll('[data-role="icon"][data-style="outline"] svg'),
+      (svg) => {
+        svg.setAttribute("stroke-linecap", value);
+      }
+    );
+  }
+
+  function setIconLinejoin(value) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll('[data-role="icon"][data-style="outline"] svg'),
+      (svg) => {
+        svg.setAttribute("stroke-linejoin", value);
+      }
+    );
+  }
+
   function setIconColor(value) {
     Array.prototype.forEach.call(
       document.querySelectorAll('[data-role="icon"] svg'),
@@ -78,6 +109,8 @@ function Setting() {
     setIconStrokeWeight(defaultStrokeWeight);
     setIconColor(getThemeColor());
     setColor(getThemeColor());
+    setIconLinecap(defaultLinecap);
+    setIconLinejoin(defaultLinejoin);
   }, []);
 
   function handleSizeChange(value) {
@@ -95,6 +128,16 @@ function Setting() {
     setColor(value);
   }
 
+  function handleLinecapChange(value) {
+    setIconLinecap(value);
+    setLinecap(value);
+  }
+
+  function handleLinejoinChange(value) {
+    setIconLinejoin(value);
+    setLinejoin(value);
+  }
+
   function handleReset() {
     setIconSize(defaultSize);
     setIconStrokeWeight(defaultStrokeWeight);
@@ -102,6 +145,8 @@ function Setting() {
     setSize(defaultSize);
     setStrokeWeight(defaultStrokeWeight);
     setColor(getThemeColor());
+    setIconLinecap(defaultLinecap);
+    setIconLinejoin(defaultLinejoin);
   }
 
   return (
@@ -115,25 +160,59 @@ function Setting() {
       <div className={styles.content}>
         <div className={styles.item}>
           <label>{t("size")}</label>
-          <Slider 
-            value={size} 
-            min={16} 
-            max={48} 
-            onInput={handleSizeChange} />
+          <div className={styles.value}>
+            <Slider value={size} min={16} max={48} onInput={handleSizeChange} />
+          </div>
         </div>
         <div className={styles.item}>
           <label>{t("strokeWeight")}</label>
-          <Slider
-            value={strokeWeight}
-            step={0.1}
-            min={0.5}
-            max={2}
-            onInput={handleStrokeWeightChange}
-          />
+          <div className={styles.value}>
+            <Slider
+              value={strokeWeight}
+              step={0.1}
+              min={0.5}
+              max={2}
+              onInput={handleStrokeWeightChange}
+            />
+          </div>
         </div>
-        <div className={styles.item2}>
+        <div className={styles.item}>
+          <label>{t("linecap")}</label>
+          <div className={styles.value}>
+            <Group value={linecap} onChange={handleLinecapChange}>
+              <Group.Item value="butt" label={t("butt")}>
+                <LinecapButtIcon />
+              </Group.Item>
+              <Group.Item value="square" label={t("square")}>
+                <LinecapSquareIcon />
+              </Group.Item>
+              <Group.Item value="round" label={t("round")}>
+                <LinecapRoundIcon />
+              </Group.Item>
+            </Group>
+          </div>
+        </div>
+        <div className={styles.item}>
+          <label>{t("linejoin")}</label>
+          <div className={styles.value}>
+            <Group value={linejoin} onChange={handleLinejoinChange}>
+              <Group.Item value="miter" label={t("butt")}>
+                <LinejoinMiterIcon />
+              </Group.Item>
+              <Group.Item value="bevel" label={t("square")}>
+                <LinejoinBevelIcon />
+              </Group.Item>
+              <Group.Item value="round" label={t("round")}>
+                <LinejoinRoundIcon />
+              </Group.Item>
+            </Group>
+          </div>
+        </div>
+        <div className={styles.item}>
           <label>{t("color")}</label>
-          <ColorPicker value={color} onChange={handleColorChange} />
+          <div className={styles.value}>
+            <ColorPicker value={color} onChange={handleColorChange} />
+          </div>
         </div>
       </div>
     </form>

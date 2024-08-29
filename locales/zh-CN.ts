@@ -23,4 +23,9 @@ export default {
   size: "Optical Size",
   strokeWeight: "Stroke Weight",
   color: "Color",
+  linecap: "Linecap",
+  linejoin: "Linejoin",
+  butt: "Butt",
+  square: "Square",
+  round: "Round",
 };
