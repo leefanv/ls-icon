@@ -186,7 +186,7 @@ function Setting(props, ref) {
               value={strokeWeight}
               step={0.1}
               min={0.5}
-              max={2}
+              max={1.5}
               onInput={handleStrokeWeightChange}
             />
           </div>
