@@ -63,7 +63,7 @@ export default function Theme({ children }) {
             </div>
             <h1 className={styles.title}>{t("title")}</h1>
             <p className={styles.description}>{t("description")}</p>
-            <div className={styles.marker}>{t("marker")}</div>
+            <div className={styles.marker}>{t("based")}</div>
           </div>
           <div className={styles.chart}>
             <DotLottieReact

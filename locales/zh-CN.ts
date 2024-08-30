@@ -19,6 +19,7 @@ export default {
   inspiredBy: ", inspired by the command line \"ls\" command, is designed to provide developers and designers with an efficient and flexible open-source icon resource website. ",
   brandName: "Lsicon",
   customize: "Customize",
+  based: "Built on a 16px grid with 1px strokes.",
   reset: "Reset",
   size: "Optical Size",
   strokeWeight: "Stroke Weight",
