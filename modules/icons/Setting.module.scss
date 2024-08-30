@@ -1,13 +1,13 @@
 .setting {
   display: flex;
-  width: 280px;
+  width: 300px;
   position: sticky;
   top: 32px;
   margin: 32px 0;
-  padding: 32px 24px;
+  padding: 32px 24px 16px 24px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 32px;
   border-radius: 12px;
   background: var(--ls-background-color-body);
   align-self: flex-start;
@@ -28,7 +28,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ls-border-color-01);
 }
 
 .reset {
@@ -56,11 +57,13 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 32px;
   align-items: center;
   justify-content: space-between;
   margin: 0 0 24px 0;
   color: var(--ls-font-color-03);
   font-weight: 500;
+  font-size: 14px;
 
   > label {
     color: var(--ls-font-color-01);

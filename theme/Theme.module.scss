@@ -166,8 +166,9 @@
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 28px 0;
-  color: var(--ls-font-color-01);
-  max-width: 680px;
+  color: var(--ls-font-color-02);
+  max-width: 560px;
+  line-height: 32px;
 }
 
 .marker {
@@ -190,7 +191,7 @@
   justify-content: center;
   width: 320px;
   height: 320px;
-
+  
   .background {
     position: absolute;
     top: 0;
